@@ -1,0 +1,5 @@
+baseURL: https://magnusborresen.com
+disablePathToLower: true
+languageCode: en-us
+title: blank
+theme: "hugo-theme-console"
