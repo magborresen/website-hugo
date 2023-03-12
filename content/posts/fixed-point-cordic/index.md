@@ -1,9 +1,9 @@
 ---
 categories: dsp
-date: "2022-06-06T22:47:00Z"
+date: "2022-06-06"
 description: Architectural design of a fixed point CORDIC algorithm
 tags: ["math", "dsp", "cordic", "fpga"]
-auther: ["me"]
+author: ["me"]
 title: Fixed Point CORDIC
 math: true
 ---
@@ -21,7 +21,7 @@ Where we set $x_0 = 1$, $y_0 = 0$ and $z_0 = \theta$. Then $\sigma_i$ becomes th
 
 The pseudo code for the algorithm is listed below.
 
-{{< figure src="cordic-pseudo.png" title="Steve Francia" width="50" >}}
+{{< figure src="cordic-pseudo.png" title="Psedo code for CORDIC algorithm" >}}
 
 The constant $k$ is calculated as $\prod_{i} k_i = \prod_{i} \frac{1}{\sqrt{1+2^{-2i}}}$. Which means this constant can also be calculated beforehand.
 
@@ -29,12 +29,13 @@ The constant $k$ is calculated as $\prod_{i} k_i = \prod_{i} \frac{1}{\sqrt{1+2^
 
 We wanted to test some of the aspects related to using a fixed point algorithm. Specifically we wanted to see how many iterations we would expect to have before the algorithm converged over the number of decimal bits used in the fixed point. This was tested in Python using the FixedPoint library. Results are shown in the figure below.
 
-{% include figure.html path="assets/img/posts/Iterations-1.png" class="img-fluid rounded z-depth-1" %}
+
+{{< figure src="Iterations-1.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 The figure shows that if a high decimal precision is required, then more iterations are needed before the algorithm converges. Which makes sense. We had an internal discussion whether the results would change if the angles used for the input were generated randomly instead of linearly, so both are included in the figure.
 Next, we tested the error between the standard Python floating point precision and the algorithm output over the number of decimal bits. The results of this can be seen in the figure below
 
-{% include figure.html path="assets/img/posts/Error-1.png" class="img-fluid rounded z-depth-1" %}
+{{< figure src="Error-1.png" title="Fixed point/Floating point resulting error from different bit precissions" >}}
 
 The figure shows that beyond $12$ decimal bits the error is more or less the same. Even $8$ decimal bits are useful. Thus based on the previous two figures, we chose a $12$-bit 2-complement implementation, with a maximum of $11$ iterations before termination. This can be described in the $Q$-number format as $Q3.12$, where we have four integer bits with MSB being the sign bit.
 
@@ -46,11 +47,11 @@ The hardware implementation of the algorithm could consist of a single CORDIC el
 
 Each elements is referenced as $CE_i$ and the inputs is connected to $CE_0$ while the output comes from $CE_10$, as shown in the figure below.
 
-{% include figure.html path="assets/img/posts/ce_chain-1.png" class="img-fluid rounded z-depth-1" %}
+{{< figure src="ce_chain-1.png" title="Example of a CORDIC element chain" >}}
 
 We can then open up each element of the previous figure and create a Synchronous Data Flow Graph (SDFG). From the previous figure we note that $CE_1$ to $CE_9$ operates in the same manner. Taking this into account, we get the following SDFG
 
-{% include figure.html path="assets/img/posts/SDF-1.png" class="img-fluid rounded z-depth-1" zoomable=true%}
+{{< figure src="SDF-1.png" title="Synchronous Data Flow (SDF) graph" >}}
 
 Nodes denoted by $F_i$ are fork nodes and does not have any arithmatic operation associtated with them. Fork nodes are not considered to cause any execution delays in further system design and is only shown for readability. Nodes that are denoted by $S_i$ takes the sign bit from $z_i$.
 
@@ -60,9 +61,11 @@ Having created these graphical representations, we can take a deeper dive into t
 
 The Precedence Graph (PG) also often referred to as a Dependency Graph, is used to visualize dependency between operations or tasks in the algorithm. In doing so, we are also able to determine the Critical Path (currently assuming that all operations require the same amount of time to execute). The PG can be seen in the figure below.
 
-{% include figure.html path="assets/img/posts/PG_time-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="PG_time-1.png" title="Precedence Graph" >}}
 
 In order to optimize the architecture and taking advantage of the some parallelism of the system, we can insert delay between all the $CE$ elements. By doing so, we make sure that the algorithm can run continously and that all the elements can execute at the same time (still under the assumption that all elements have the same processing time from input to output). As shown in the figure below.
+
+{{< figure src="ce_chain_delayed-1.png" title="Chain of CORDIC elements with inserted delays" >}}
 
 {% include figure.html path="assets/img/posts/ce_chain_delayed-1.png" class="img-fluid rounded z-depth-1"%}
 
@@ -72,9 +75,9 @@ We've also put a limit on the amount of function units that are available for mu
 
 We can use the previously created DFG and PG in order to create a schedule for the algorithm. For this we will use the __ASAP__ & __ALAP__ methology, which is where we first schedule operations as soon as possible and afterwards they are scheduled as late as possible. The methology makes it possible to calculate the mobility and urgency for each operation, which in turn, we can use to create a __prioritized ready list__. ASAP and ALAP schedules can be seen in the figures below.
 
-{% include figure.html path="assets/img/posts/asap-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="asap-1.png" title="As Soon As Possible Scheduling" >}}
 
-{% include figure.html path="assets/img/posts/alap-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="alap-1.png" title="As Late As Possible Scheduling" >}}
 
 The $C_i$'s on the left side of each plot corresponds to a C-step.
 
@@ -97,11 +100,11 @@ Where $w$ is a weight associated with each operation that can be defined in diff
 ### Operation Schedule
 As we have prevously already stated the allocation of our ressources (i.e. one adder and one shifter per $CE$), we can now schedule from the results above. Thus for every C-step we can only do one shift operation and one addition in each $CE$. So for $CE_0$, the shifting operations $x_4$ and $x_6$ have the lowest mobility and the highest urgency and thus should be scheduled first. Because of only having one bit-shifter, we have to schedule them in two C-steps. As they also have the same mobility, we can schedule them randomly. So we will schedule $x_4$ in the first C-step and $x_6$ in the second C-step. Now, our ressource allocation also permits us to schedule an addition/subtraction in the first C-step, however since both $+_2$ and $+_7$ are dependent on $x_4$ and $x_6$ respectively, we cannot schedule those in C-step 1. The only operation left for scheduling then in $-_{10}$. For C-step 2, the only addition that is available to perform is $+_2$ as $x_6$ is also scheduled for this C-step. We'll end up scheduling $+_7$ in C-step 3. This scheduling scheme is used for $CE_0$ to $CE_9$. For $CE_{10}$ we can see from the ASAP and ALAP schedules that the operations have no mobility, so we have to schedule them as is. Meaning we'll end up with the following schedule.
 
-{% include figure.html path="assets/img/posts/PG_area-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="PG_area-1.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 The scheduling scheme now permits us to illustrate the system as a Finite State Machine (FSM). More specifically, we will illustrate the system as an Algorithmic State Machine (ASM) that has 3 states. Each state is defined as one of the C-steps in the schedule shown above. The ASM can be seen below.
 
-{% include figure.html path="assets/img/posts/ASM_CE2-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="ASM_CE2-1.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 From the ASM we can see that the output logic is dependent on $sign(z_i)$, which in our case is an input to each of the $CE$'s. Hence we can define the FSM as a Mealy Machine.
 
@@ -109,11 +112,11 @@ From the ASM we can see that the output logic is dependent on $sign(z_i)$, which
 
 The datapath of a system is a collection of the operations, registers and the connections between them. Since the system we are designing both have time-constrain considerations as well as area constraints, each of the $CE$'s will have dedictated hardware such that inputs and outputs can be run "continously". From the schedule we can see that the datapath for $CE_0$ to $CE_9$ is identical. However our $CE_{10}$ does not share the same schedule and must therefore have a different datapath as there are more operations to consider. By using the schedule shown just before, we can implement the SDFG that we previously illustrated. The results is the datapath below.
 
-{% include figure.html path="assets/img/posts/datapath-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="datapath-1.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 State input/outputs are switched using multiplexers shown with bit sequence control inputs on each line. Registers are depicted by boxes. The bit-shifting operation denoted by the square box with the operation $>>(i)$, which as mentioned equivalent to shifting $i$-times to the right. Internal registers are denoted by $r_1$ and $r_2$, while registers on in/output are denoted by the respective variable names and $CE$ element count. We will write to an output register at each state, so a control signal to each of the registers is needed. Since $CE_{10}$ is different from the rest of the elements, we create a unique datapath for it, which is shown below.
 
-{% include figure.html path="assets/img/posts/datapath-1.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="datapath_last_itr-1.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 The datapath shows that $CE_{10}$ is used as the output element and the cosine and sine to the input angle $\theta$ is output. We also see the two actual multipliers in the system (not the shifters as in the other elements). We also require two ALU's for this element in order to process both outputs in parallel.
 
@@ -121,7 +124,7 @@ The datapath shows that $CE_{10}$ is used as the output element and the cosine a
 
 We cannot rely solely on the data path. Thus, as previously shown in the CDFG, we also need a control path. Signals from the control path is connected through to the datapath such that operations can be timed to the correct state. All generated control signals is shown in the table below.
 
-{% include figure.html path="assets/img/posts/control-signals.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="control-signals.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 Multiplexers that can control more than one input will be controlled by two-bit signals whereas we can control two-input multiplexers with only a one bit signal. Each register will have a control signal such that it can be read from or written to. Further, ALU's will have a control signal such that we can switch between addition and subtraction, based on $sign(z)$.
 
@@ -129,16 +132,16 @@ Multiplexers that can control more than one input will be controlled by two-bit 
 
 Having defined a datapath, ASM and a schedule, we can start thinking about implementing the algorithm in Register Transfer Level (RTL). We have chosen not to explore the actual implementations of adders and multipliers, which means we only use IP-blocks from the Quartus library. Multiplexers have been implemented as two different functional units with a different amount of input and control signal input size. The RTL diagram can be seen in the figure below.
 
-{% include figure.html path="assets/img/posts/RTL_Inside_CE.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="RTL_Inside_CE.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 The RTL follows the datapath closely and the only difference in the two diagrams is that control signals are also shown in the former. The bitshifter in each of the $CE$ elements need to know how many times to shift. Therefore a constant has been defined for each of the $CE$'s. This constant is hardcoded and is therefore not part of the control-flow. Now we need to put multiple $CE$'s together which can be seen in the RTL diagram below.
 
-{% include figure.html path="assets/img/posts/RTL_two_CE.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="RTL_two_CE.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 ### Control Unit
 
 Control signals are implemented in a seperate block and can be seen in the figure below.
 
-{% include figure.html path="assets/img/posts/RTL_control.png" class="img-fluid rounded z-depth-1"%}
+{{< figure src="RTL_control.png" title="Iterations to run algorithm compared to number of decimal points" >}}
 
 The FSM is implemented as the yellow box in the diagram and contain state information about the current and next state. The output of the FSM is connected to a bus that also connects to a bunch of multiplexers. In this way, the control signals can be switched to match the current state operations. There are still some bugs in the implementation which we have not been able to fix yet.
