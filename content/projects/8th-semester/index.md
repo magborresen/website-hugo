@@ -1,9 +1,9 @@
 ---
-layout: page
-importance: 1
-title: 'Track-Before-Detect FMCW Radar Algorithm Exploration'
-img: /assets/img/projects/2nd-semester-graduate/likelihood_map_3d-1.png
-category: university
+categories: university
+date: "2022-06-14"
+description: Track-Before-Detect FMCW Radar Algorithm Exploration
+author: ["me"]
+title: Track-Before-Detect FMCW Radar Algorithm Exploration
 ---
 
 Now that there's only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.
@@ -12,7 +12,7 @@ Since we knew absolutely nothing about radar systems we took to the internet and
 
 So let's see what kind of usecase we can create for this radar system.
 
-{% include figure.html path="assets/img/projects/2nd-semester-graduate/usecase-1.png" class="img-fluid rounded z-depth-1" %}
+{{< figure src="usecase-1.png" >}}
 
 We want to have an array of transmitter antennas and receiver antennas. The transmitters will send out a signal that will bounce of any present targets, but also other objects which we will call clutter. Since we don't have any actual antennas, we need to simulate how a signal would propagate from one antenna, to a target, to another antenna. How should the antennas even be placed in relation to each other? (Note: we will not be taking full use of the advantages that a MIMO system brings to the table because of the limited amount of time a semester offers.)
 
@@ -38,21 +38,21 @@ Depending of the Radar Cross Sectional (RCS) area of the object, some energy wil
 
 $$P_r = \frac{P_t G_t G_r \lambda^2 \sigma}{(4\pi)^2 R^4 L_a(R)}$$
 
-Where $$P_t$$ is the transmitted power, $$G_t, G_r$$ is gains of the transmitter and receiver, $$\lambda$$ is the wavelength of the carrier, $$\sigma$$ is the RCS, $$R$$ is the distance and $$L_a(R)$$ is an attenuation factor determine by wavelength, media and altitude. This factor can be read of a figure in many rader theory books such as Fundamentals of Radar Signal Processing by Mark A Richards - I would recommend this books to anyone interested in learning more about radar theory and the signal processing aspect.
+Where $P_t$ is the transmitted power, $G_t, G_r$ is gains of the transmitter and receiver, $\lambda$ is the wavelength of the carrier, $\sigma$ is the RCS, $R$ is the distance and $L_a(R)$ is an attenuation factor determine by wavelength, media and altitude. This factor can be read of a figure in many rader theory books such as Fundamentals of Radar Signal Processing by Mark A Richards - I would recommend this books to anyone interested in learning more about radar theory and the signal processing aspect.
 
 For the RCS we found a figure of some common DJI commercial drones in a NATO paper - [Drone RCS Statistical Behaviour](https://www.sto.nato.int/publications/STO%20Meeting%20Proceedings/STO-MP-MSG-SET-183/MP-MSG-SET-183-04.pdf).
 
-So we can quickly see from the equation that the received signal strength will decrease very rapidly the further the target is from the observation point. In our implementation we've assumed, so far, that antennas are isotropic (even the they are wildly directional) and that the gains are optimal at $$1$$. Thus we can use the to determine the maximum distance that we can detect and track a target from
+So we can quickly see from the equation that the received signal strength will decrease very rapidly the further the target is from the observation point. In our implementation we've assumed, so far, that antennas are isotropic (even the they are wildly directional) and that the gains are optimal at $1$. Thus we can use the to determine the maximum distance that we can detect and track a target from
 
 $$R_{max} = \sqrt[4]{\dfrac{P_t G_t G_r \lambda^2 \sigma}{(4\pi)^3 S_{min} L_a(R)}}$$
 
-Where $$S_{min}$$ is the minimum detectable signal power before the signal is just lost in noise in the receiver. There are also influence from the earths surface and curvature that can be implemented into the mathematical model. For example the signal can hit the ground and be reflected from there onto the target and back to the receiver. This would increase the observed delay between transmission and reception. However we have not considered that for this project. Which means that $$S_{min}$$ will be defined by the SNR in the receiver.
+Where $S_{min}$ is the minimum detectable signal power before the signal is just lost in noise in the receiver. There are also influence from the earths surface and curvature that can be implemented into the mathematical model. For example the signal can hit the ground and be reflected from there onto the target and back to the receiver. This would increase the observed delay between transmission and reception. However we have not considered that for this project. Which means that $S_{min}$ will be defined by the SNR in the receiver.
 
 ## Radar Modulation
 
 So in order to actually use the theories we just discussed in relation to the radar equation in practice, we first need to send out a signal. The modulation could either be a continous wave (CW) waveform were we either use no modulation, use frequency modulation, or phase modulation. The other way we can go is to send out a series of pulses, basically turning the transmitter on and of, usually very fast. Here we can either stick with the pure pulse, or we can start using modulation inside the pulse. As with CW we can use frequency or phase modulation. For ranging and angle estimation purposes, we often use a Frequnecy modulated Continous Wave Radar (FMCW). The name can be a little devious, because what we are acuatlly doing is sending out a series of pulses with frequency modulation. The total series of pulses is called a frame.
 
-An FMCW radar will over a period of a pulse, linearly change the frequency of the signal from $$f_{min}$$ to $$f_{max}$$. When receiving the signal after it having bounced of the target, we will use a mixer in order to mix the original signal with the time delayed received signal. This is shown in the image below.
+An FMCW radar will over a period of a pulse, linearly change the frequency of the signal from $f_{min}$ to $f_{max}$. When receiving the signal after it having bounced of the target, we will use a mixer in order to mix the original signal with the time delayed received signal. This is shown in the image below.
 
 The FMCW Radar uses a Fourier Transform on the received signal in order to determine 
 

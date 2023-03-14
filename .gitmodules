@@ -1,3 +1,6 @@
 [submodule "themes/hugo-theme-console-mb"]
 	path = themes/hugo-theme-console-mb
 	url = git@github.com:magborresen/hugo-theme-console-mb.git
+[submodule "themes/archie"]
+	path = themes/archie
+	url = git@github.com:athul/archie.git

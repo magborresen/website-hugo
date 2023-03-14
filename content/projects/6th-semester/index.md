@@ -56,10 +56,6 @@ G1 E2 // Extrude filament 2 mm
 Repeat from line 1 until end of GCODE file
 {{< / highlight >}}
 
-{{< highlight python "linenos=table" >}}
-def function
-{{< / highlight>}}
-
 Since we could now make a model in 3D that we could use for comparison and we could inject custom GCODE, we were ready to start developing the image processing chain. First thing we started to tackle was the segmentation.
 
 ## Image Processing Chain

@@ -1,0 +1,44 @@
+baseURL = "https://magnusborresen.com"
+languageCode = "en-us"
+title = "Magnus Borresen"
+theme="archie"
+copyright = "© Magnus Borresen"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+	mode="auto"
+	useCDN=false
+	subtitle = "One in about 7 billion"
+    katex=true
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/magborresen"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/mag-borresen/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4

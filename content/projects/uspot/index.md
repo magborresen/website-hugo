@@ -17,7 +17,6 @@ The first prototype in a 3D model is shown below.
 
 {{< figure src="WeldMeister_bottom.png" >}}
 
-{% include figure.html path="assets/img/projects/WeldMeister_top.png" class="img-fluid rounded z-depth-1" zoomable=true %
 {{< figure src="WeldMeister_top.png" >}}
 
 The big empty footprint on the top side is supposed to show a rotary encoder, but I lost the 3D model for it before making this post.
