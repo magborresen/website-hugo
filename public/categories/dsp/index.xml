@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dsp on Magnus Borresen</title>
+    <link>https://magnusborresen.com/categories/dsp/</link>
+    <description>Recent content in dsp on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/dsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixed Point CORDIC</title>
+      <link>https://magnusborresen.com/posts/fixed-point-cordic/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
+      <description>This post was written as a part of my exam preperation for the course in Low Energy and Reconfigurable Systems at AAU. It is a writeup from a miniproject done in cooperation with two of my fellow students. The miniproject goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi Hearing Tester</title>
+      <link>https://magnusborresen.com/projects/1st-semester/</link>
+      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/1st-semester/</guid>
+      <description>The first semester project I did was in a project group with 6 of my fellow students. The frame of the project was to get started with electronics, microcontrollers and single board computers. Being at Aalborg University, the project also had to relate the the UN World Goals. We decided on a project that would help uncover hearing disabilities and educate young people in the public schools. The below is the abstract from the project report</description>
+    </item>
+    
+  </channel>
+</rss>

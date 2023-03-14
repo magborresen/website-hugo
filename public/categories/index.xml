@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Magnus Borresen</title>
+    <link>https://magnusborresen.com/categories/</link>
+    <description>Recent content in Categories on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Tue, 14 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>university</title>
+      <link>https://magnusborresen.com/categories/university/</link>
+      <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/university/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dsp</title>
+      <link>https://magnusborresen.com/categories/dsp/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/dsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PCB-art</title>
+      <link>https://magnusborresen.com/categories/pcb-art/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/pcb-art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electronics-Design</title>
+      <link>https://magnusborresen.com/categories/electronics-design/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/electronics-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>acoustics</title>
+      <link>https://magnusborresen.com/categories/acoustics/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/acoustics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://magnusborresen.com/categories/machine-learning/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neural networks</title>
+      <link>https://magnusborresen.com/categories/neural-networks/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/neural-networks/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

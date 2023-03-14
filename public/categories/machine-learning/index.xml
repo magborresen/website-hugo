@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Magnus Borresen</title>
+    <link>https://magnusborresen.com/categories/machine-learning/</link>
+    <description>Recent content in machine learning on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Robustness Testing of a CNN in Acoustic Scene Classification</title>
+      <link>https://magnusborresen.com/projects/7th-semester/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/7th-semester/</guid>
+      <description>The first semester of the master studies in Signal Processing was more or less an introduction to signal processing within audio systems. We had a few project proposals from external companies. My project group and I (4 people in total), found a few of the proposals from the company RTX A/S interesting. RTX works a lot in the audio domain and develops a great deal of headset technology. They were interested in some student investigating more into classification of acoustic scenes using neural networks.</description>
+    </item>
+    
+  </channel>
+</rss>

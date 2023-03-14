@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Magnus Borresen</title>
+    <link>https://magnusborresen.com/tags/</link>
+    <description>Recent content in Tags on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aisler</title>
+      <link>https://magnusborresen.com/tags/aisler/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/aisler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cordic</title>
+      <link>https://magnusborresen.com/tags/cordic/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/cordic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dsp</title>
+      <link>https://magnusborresen.com/tags/dsp/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/dsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fpga</title>
+      <link>https://magnusborresen.com/tags/fpga/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/fpga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kicad</title>
+      <link>https://magnusborresen.com/tags/kicad/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/kicad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://magnusborresen.com/tags/math/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pcb</title>
+      <link>https://magnusborresen.com/tags/pcb/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/pcb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://magnusborresen.com/tags/design/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electronics</title>
+      <link>https://magnusborresen.com/tags/electronics/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/electronics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

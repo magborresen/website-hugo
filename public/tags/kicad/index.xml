@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kicad on Magnus Borresen</title>
+    <link>https://magnusborresen.com/tags/kicad/</link>
+    <description>Recent content in kicad on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/kicad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Triumph T509 PCB keychain</title>
+      <link>https://magnusborresen.com/projects/t509-keychain/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/t509-keychain/</guid>
+      <description>or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.</description>
+    </item>
+    
+    <item>
+      <title>µLevel Pressure Sensor</title>
+      <link>https://magnusborresen.com/projects/ulevel/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/ulevel/</guid>
+      <description>The µLevel is one of my pet projects that I started after needing a bed levelling feature on my 3D printer. I had built a Hypercube 3D printer that I never really got working properly. So I ended up selling it and bought a Creality Ender 3 instead. This means that the project has been put on hold since it was designed pretty specifically to the Hypercube. However I might pick it up again.</description>
+    </item>
+    
+    <item>
+      <title>µSpot Battery Spot Welder</title>
+      <link>https://magnusborresen.com/projects/uspot/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/uspot/</guid>
+      <description>For a few years now, I have been working with 18650 battery cells that I got a ton of from an bike shop that had deemed them defective. I took the ebike batteries apart and tested each cell individually. Usually I would only find 1-2 cells per pack that was actually the culprit of the pack testing bad at the bike shop. This is out of a 40 cell pack.</description>
+    </item>
+    
+  </channel>
+</rss>

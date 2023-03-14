@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>µSpot Battery Spot Welder - Magnus Borresen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Design of a PCB spot welder" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="µSpot Battery Spot Welder" />
+<meta property="og:description" content="Design of a PCB spot welder" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://magnusborresen.com/projects/uspot/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2021-08-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="µSpot Battery Spot Welder"/>
+<meta name="twitter:description" content="Design of a PCB spot welder"/>
+<script src="https://magnusborresen.comjs/feather.min.js"></script>
+	
+	
+        <link href="https://magnusborresen.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://magnusborresen.com">Magnus Borresen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">Posts</a>
+		
+		<a href="/projects">Projects</a>
+		
+		<a href="/about">About</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">µSpot Battery Spot Welder</h1>
+			<div class="meta">Posted on Aug 15, 2021</div>
+		</div>
+		
+
+		<section class="body">
+			<p>For a few years now, I have been working with 18650 battery cells that I got a ton of from an bike shop that had deemed them defective. I took the ebike batteries apart and tested each cell individually. Usually I would only find 1-2 cells per pack that was actually the culprit of the pack testing bad at the bike shop. This is out of a 40 cell pack.</p>
+<p>Anyway, loose 18650 cells aren’t much fun having laying around, but they can be hard to work with. One cell isn’t enough to power larger stuff such as a DIY E-bike. So you need some cells in series and some in parallel. To do that you need to connect the battery terminals in some sort of permanent way. Previously I have done that by soldering them (I did that for my first E-bike battery pack). However soldering them takes a long time and whats worse is that you need to heat up the batteries quite a lot to get the solder to flow onto the terminal. Heating up the batteries with a 370 degree celcius soldering iron is not very pleasant for the battery. So it might end up failing or even overheat and catch on fire. Luckily I did not experience this when doing the first pack. If you are to try and solder cells together, use the tip with the most amount of surface area. Do not use the horrible conical tips, it will take to long to heat the battery terminal.</p>
+<p>The idea for WeldMeister came when I saw the KWeld spotwelder. This was a PCB spot welder as well but with big copper busbars running on the currents path between the two welding tips. The unit is relatively big and I thought it might be better with something where the entire unit was handheld. The other nice thing about the KWeld is that it can be operated by a LiPo battery with a high enough C-rating. Last but not least, the creator made it not only timer based, but also energy based. So one can choose how many joules that should be delivered into the weld spot. According to the creator, this should yield more consistent welds. I liked that idea and so I wanted to see if I could recreate something like it in a smaller package.</p>
+<p>The first prototype in a 3D model is shown below.</p>
+<figure><img src="WeldMeister_bottom.png"/>
+</figure>
+
+<figure><img src="WeldMeister_top.png"/>
+</figure>
+
+<p>The big empty footprint on the top side is supposed to show a rotary encoder, but I lost the 3D model for it before making this post.</p>
+<p>Progress is currently that I have the bare boards at hand, but the global chip pandemic has made my high power transistors become a scarcity. So either I have to redesign the boards with new transistors or wait until they are back in stock. Which, by the looks of it, is late 2022.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/pcb">pcb</a></li>
+					
+					<li><a href="/tags/kicad">kicad</a></li>
+					
+					<li><a href="/tags/aisler">aisler</a></li>
+					
+					<li><a href="/tags/design">design</a></li>
+					
+					<li><a href="/tags/electronics">electronics</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Magnus Borresen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
