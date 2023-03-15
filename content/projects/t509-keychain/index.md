@@ -1,6 +1,6 @@
 ---
 categories: PCB-art
-date: "2022-06-06"
+date: "2023-01-13"
 description: Design of a keychain for my Triumph T509 motorcycle
 tags: ["pcb", "kicad", "aisler"]
 author: ["me"]
