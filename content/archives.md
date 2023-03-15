@@ -1,6 +1,5 @@
 ---
-title: "posts"
+date: 2019-05-28
+type: section
 layout: "archives"
-url: "/posts/"
-summary: posts
 ---
