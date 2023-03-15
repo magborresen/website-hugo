@@ -12,6 +12,7 @@ pygmentscodefencesguesssyntax = true
 	useCDN=false
 	subtitle = "One in about 7 billion"
     katex=true
+    favicon="/assets/img/favicon-32x32.png"
 
 [[params.social]]
 name = "GitHub"
