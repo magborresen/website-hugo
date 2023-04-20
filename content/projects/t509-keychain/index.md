@@ -18,8 +18,6 @@ Anyway, the plan was to sketch out the motorcycle in Inkscape and create a kind 
 I actually started out by doing the tracing on my iPad, but when I transferred it to my computer, I realized that i couldn't change the width of the lines I had traced. Which is kind of important because I wanted the lines to become the copper traces on the PCB. 
 The resulting Inkscape project looks like this
 
-{% include figure.html path="assets/img/projects/triumph_keychain/inkscape_project.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-
 {{< figure src="inkscape_project.png" title="Inkscape vector drawing for export to KiCAD" >}}
 
 One very important thing to think about when in the Inkscape stage is the size of the project. Like a keychain shouldn't be very big. I wanted something that was about 4 cm across and whatever that then corresponded to in height. So I scaled the oval to be 4 cm across. The traces where scaled according to the design rules of the PCB manufacturer. I've used AISLER for this project, so if you use someone else, you may have different design rules. So the minimum trace size I could use was 0.2 mm. Which somewhat limits the amount of details you can include since the PCB will be so small.
@@ -28,8 +26,6 @@ Next step was to transfer the layers individually to KiCAD in order to create th
 
 Now we can start importing the details. In this case, I have only worked with the idea of making the copper traces visible and using them for the sketched motorcycle. In order to expose the copper, we need to let the production house somehow know that they should put no soldermask on that part of the board. 
 We can do this by creating a new footprint. Then we use the build in image converter in KiCAD to convert a PNG of the traced motorcycle to something KiCAD can work with. 
-
-{% include figure.html path="assets/img/projects/triumph_keychain/image_converter.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 {{< figure src="image_converter.png" title="KiCAD image converter tool" >}}
 

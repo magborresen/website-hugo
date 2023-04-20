@@ -45,7 +45,7 @@ The hardware implementation of the algorithm could consist of a single CORDIC el
 
 ### Synchronous Data Flow
 
-Each elements is referenced as $CE_i$ and the inputs is connected to $CE_0$ while the output comes from $CE_10$, as shown in the figure below.
+Each elements is referenced as $CE_i$ and the inputs is connected to $CE_0$ while the output comes from $CE_{10}$, as shown in the figure below.
 
 {{< figure src="ce_chain-1.png" title="Example of a CORDIC element chain" >}}
 
@@ -66,8 +66,6 @@ The Precedence Graph (PG) also often referred to as a Dependency Graph, is used 
 In order to optimize the architecture and taking advantage of the some parallelism of the system, we can insert delay between all the $CE$ elements. By doing so, we make sure that the algorithm can run continously and that all the elements can execute at the same time (still under the assumption that all elements have the same processing time from input to output). As shown in the figure below.
 
 {{< figure src="ce_chain_delayed-1.png" title="Chain of CORDIC elements with inserted delays" >}}
-
-{% include figure.html path="assets/img/posts/ce_chain_delayed-1.png" class="img-fluid rounded z-depth-1"%}
 
 We've also put a limit on the amount of function units that are available for multipleication and addition in each of the $CE$'s. Every $CE$ will have one shifter (for multiplication) and one adder available. We can use shifters for most of the multiplications since many of them are something multiplied with $2^{-i}$, which can be done by right shifting $i$-times. Meaning we end up with 11 shifters, 11 adders, and two multipliers for the 11 iteration CORDIC algorithm. The following scheduling section will show how this is possible.
 
@@ -93,7 +91,7 @@ So for $CE_10$ the mobility for all operations is zero since they are all schedu
 
 Having calculated the mobilities for all the operations, we can go on to calculate the urgencies. Which we can calculate using the following expression
 
-$$U(op) = \frac{w}{\#CS}$$
+$$U(op) = \frac{w}{CS}$$
 
 Where $w$ is a weight associated with each operation that can be defined in different ways. $\#CS$ is the number of control steps we go through until we hit the c-step where the operation is scheduled in ALAP. For this implementation we will set the weights equal to the computation times of the operations. But since we have assumed that all operations takes the same amount of time to complete, we will set all the weights to $1$.
 
