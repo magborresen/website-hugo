@@ -6,4 +6,4 @@
 	url = git@github.com:hugo-sid/hugo-blog-awesome.git
 [submodule "themes/cupper-hugo-theme"]
 	path = themes/cupper-hugo-theme
-	url = git@github.com:zwbetz-gh/cupper-hugo-theme.git
+	url = https://github.com/zwbetz-gh/cupper-hugo-theme.git
