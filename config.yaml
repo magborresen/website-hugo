@@ -76,14 +76,15 @@ markup:
       unsafe: true
       xHTML: false
   highlight:
-    codeFences: false
+    codeFences: true
     hl_Lines: ""
     lineNoStart: 1
-    lineNos: false
+    lineNos: true
     lineNumbersInTable: true
     noClasses: true
     style: monokai
     tabWidth: 4
+    guessSyntax: true
   tableOfContents:
     endLevel: 6
     startLevel: 2
