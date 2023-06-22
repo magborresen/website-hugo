@@ -1,6 +1,1 @@
-[submodule "themes/archie"]
-	path = themes/archie
-	url = https://github.com/athul/archie.git
-[submodule "themes/cupper-hugo-theme"]
-	path = themes/cupper-hugo-theme
-	url = https://github.com/zwbetz-gh/cupper-hugo-theme.git
+
