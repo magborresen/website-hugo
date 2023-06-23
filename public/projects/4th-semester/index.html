@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html><head lang="en">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Custom CPU and Sensor System - Magnus Borresen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Custom CPU and Sensor System - Magnus Borresen</title><link rel="icon" type="image/png" href=/static/assets/img/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Custom CPU and Sensor System" />
 	<meta property="og:image" content=""/>
 	<meta property="og:title" content="Custom CPU and Sensor System" />
@@ -13,25 +13,25 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Custom CPU and Sensor System"/>
 <meta name="twitter:description" content="Custom CPU and Sensor System"/>
-<script src="https://magnusborresen.comjs/feather.min.js"></script>
-	
-	
-        <link href="https://magnusborresen.com/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
-	
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
-	
-
-	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.7897b0157189f85b629cd1ef8a916bb8fc45e75abdf6c87f5a22030ab04fcce0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.c95c5dcf5f32f8b67bd36f7dab66680e068fce2b303087294114aabf7a7c080b.css" media="(prefers-color-scheme: dark)"  />
 	
 
 	
 	
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 		
 		
 		<script>
@@ -57,11 +57,11 @@
 		
 		<a href="/">Home</a>
 		
-		<a href="/posts">Posts</a>
+		<a href="/posts/">Blog</a>
 		
-		<a href="/projects">Projects</a>
+		<a href="/projects/">Projects</a>
 		
-		<a href="/about">About</a>
+		<a href="/ifil/">I Fail I Learn</a>
 		
 		
 	</nav>
@@ -108,10 +108,183 @@
 <p>Since the semester was focused around digital design, we spent a lot of report pages explaining how different interfaces such as I2C, SPI and UART works. But we also got to dive deeper in how ADC’s work and the different architectures used in most IC’s today.</p>
 <p>We made a Real-Time system analysis using CODARTS, which was probably a little bit overkill think back at it. The system did not really need to work real-time and we could have easily left it out. However it was a part of the course we were taught, so we included it to show that we had understood it.</p>
 <p>We chose to run a FreeRTOS kernel in the PSoC. It was fun to implement and it also meant that we would have the Real-Time aspect of the curricilum covered.</p>
-<p>The FPGA part was implemented on a Terrasic DE0-CV and was designed from a microcontroller standpoint. We used the AVR architecture as a reference point. This meant using the RISC ISA and designing our own instructions, which was very interesting. We ended up implementing instructions for SRAM, ALU, Branch Control and Perifiral Control. The architechture we implemented can be seen below.</p>
+<p>The first thing we did was define and design the Instruction Set Architecture that was gonna be used for the CPU on the FPGA. We designed the ISA from knowing which operations we would need the ALU in the CPU to be able to execute. The resulting operation codes and their functions can be seen in the table below.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Shortcode</strong></th>
+<th><strong>Opcode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do nothing</td>
+<td>NOP</td>
+<td>00000</td>
+</tr>
+<tr>
+<td><strong>SRAM Operations</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Read from SRAM</td>
+<td>LAS</td>
+<td>00001</td>
+</tr>
+<tr>
+<td>Write to SRAM</td>
+<td>SKR</td>
+<td>00010</td>
+</tr>
+<tr>
+<td><strong>ALU Operations</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logic Larger Than</td>
+<td>STO</td>
+<td>00011</td>
+</tr>
+<tr>
+<td>Logic Smaller Than</td>
+<td>MIN</td>
+<td>00100</td>
+</tr>
+<tr>
+<td>Equal To</td>
+<td>LIG</td>
+<td>00101</td>
+</tr>
+<tr>
+<td>Logic AND</td>
+<td>AND</td>
+<td>00110</td>
+</tr>
+<tr>
+<td>Logic OR</td>
+<td>ORR</td>
+<td>00111</td>
+</tr>
+<tr>
+<td>Addition</td>
+<td>ADD</td>
+<td>01000</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>SUB</td>
+<td>01001</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>DIV</td>
+<td>01010</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>MUL</td>
+<td>01011</td>
+</tr>
+<tr>
+<td><strong>Branch Control</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Branch to Instruction</td>
+<td>HOP</td>
+<td>01100</td>
+</tr>
+<tr>
+<td>Conditional Branch</td>
+<td>HOPC</td>
+<td>10001 </td>
+</tr>
+<tr>
+<td><strong>Perifirals</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UART RX</td>
+<td>UAL</td>
+<td>01101</td>
+</tr>
+<tr>
+<td>UART TX</td>
+<td>UAS</td>
+<td>01110</td>
+</tr>
+<tr>
+<td>Show on display</td>
+<td> VIS</td>
+<td>01111</td>
+</tr>
+<tr>
+<td>UART Conditional branch</td>
+<td>HOPUC</td>
+<td>10010</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows the actual operation described in text, the shortcode which could be used if writing assembly and an opcode in binary, which the assembly code could be translated into. Because of the specific sensors used in this project, it is necessary for the CPU to be designed as a 16-bit machine. This is due to the fact that one of the sensors are outputting 16-bit values. Now we could have designed the CPU to be 8-bit and then just loaded two bytes of data into two 8-bit registers, but that would make the design a little more complicated. Also this would require two ALU operations every time we needed to use that value from the sensor.
+The instruction set is implemented using the little endian scheme. Meaning instructions are read from right to left. The following abbreviations are used in the design of the codes</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRAM-adress</td>
+<td>=</td>
+<td>sssssss</td>
+</tr>
+<tr>
+<td>Operand register (GPR)</td>
+<td>=</td>
+<td>rrr</td>
+</tr>
+<tr>
+<td>Destination register (GPR)</td>
+<td>=</td>
+<td>ddd</td>
+</tr>
+</tbody>
+</table>
+<p>This means that for all instructions in the instruction set, the first five bits from the right will be the opcode. The rest of the bits are then designated to adress registers for the data to either be saved to or loaded from. A simple example of the no operation instruction can be seen below.</p>
+<figure><img src="nop-code.png"/>
+</figure>
+
+<p>There are also more advanced codes, like the ones used for controlling the SRAM module. These codes needs to have either a destination or an operand register and a SRAM register adress. These codes can be seen below.</p>
+<figure><img src="sram-code.png"/>
+</figure>
+
+<p>Lastly, perhaps the most advanced part of the instruction set are the instructions used for controlling the ALU. This is the module of the design that requires the most amount of operations in order to function. It requires two GPR&rsquo;s to fetch data from and a single GPR from the destination of the data. The instructions can be seen below</p>
+<figure><img src="alu-codes.png"/>
+</figure>
+
+<p>The FPGA part was implemented on a Terrasic DE0-CV and was designed from a microcontroller standpoint. The microarchitecture is designed based on the AVR architecture with one majer difference. The general AVR design uses a Harvard achitecture, meaning the storage for instruction set and data are located in two different parts of the memory. This enables the system to fetch both instructions and data at the same time and thereby potentially making the system faster.</p>
+<p>In this project we chose to implement a Von Neumann architecture, where the memory of data and instructions are shared. This is not as elegant, but it&rsquo;s simpler to implement. The architecture can be seen in the image below.</p>
 <figure><img src="micro_architecture.jpg"/>
 </figure>
 
+<p>The two most important parts for the control in the architecture is the <strong>program counter</strong> and the <strong>control unit</strong>. The program counter outputs the SRAM adress of the current instruction to be executed. There are several inputs to the program counter. One of the more interesting inputs is the branching input. This input makes it possible to skip to a designated command in the program counter.</p>
+<p>The control unit takes the opcode and ensures that the correct signals are set across the architecture. By signals I mean the control inputs for all the other elements of the architecture. The control unit is responsible for all of the read and write enable signals to all the registers including the SRAM. To control the control unit itself, a finite state machine has been implemented. The FSM has five states and transitions automatically everytime a rising edge of the clock is observed. The state transition diagram for the FSM can be seen in the figure below.</p>
+<figure><img src="cu-fsm.png"/>
+</figure>
+
+<p>The first state is entered everytime the system is restarted, which is needed in order to send reset signals for all the modules requiring them. Next, is the fetch state. The state is somewhat self-explanatory. It is there in order for the system to fetch the next instruction from memory. In this case, the program counter will send the correct adress for the instruction to the SRAM which will then output the instruction on the next rising edge to the Instruction Decoder.</p>
+<p>In the next state, which is the decode state, the Instruction Decoder module will have taken the output from the SRAM and decode it such that the opcode can be passed on to the control unit.</p>
+<p>The next state is the execute state, which is the state where all the fun stuff happens. All of the different control signals for the different modules are set in the control unit using the opcode coming from the instruction decoder. In the end, all of the operations that is needed to be carried out in the ALU are carried out and the output is written to the databus.</p>
+<p>With the databus being implemented as a register, it is necessary to have one final state in the FSM before completing the cycle. This is the writeback state, where the data located in the databus register is written back into memory and ready for further processing.</p>
+<p>The next rising edge will restart the cycle into the fetch state in order to get the next instruction from memory.</p>
 <p>The outcome of the project was that we were able to read data of all sensors into the real-time system and transfer them between the CPU and PSoC. We were also able to send new instruction from the CPU to the PSoC.</p>
 <p>Because of COVID we never got to see it implemented in the system it was intended to. However we still learned a lot and I consider it one of the most interesting semesters on the Bachelors.</p>
 
@@ -122,15 +295,15 @@
 			
 			
 		</div>
-	</article>
+		</article>
 </main>
 <footer>
-  <div style="display:flex"><a class="soc" href="https://github.com/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
     <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
     <a class="border"></a></div>
   <div class="footer-info">
     2023  © Magnus Borresen |  <a
-      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+      href="https://github.com/athul/archie">Archie Theme (modified)</a> | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

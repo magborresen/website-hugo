@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keras on Magnus Borresen</title>
+    <link>https://magnusborresen.com/tags/keras/</link>
+    <description>Recent content in keras on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/keras/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preparing Time Series Data For Neural Network Inputs</title>
+      <link>https://magnusborresen.com/posts/timeseriesgenerator-keras/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/timeseriesgenerator-keras/</guid>
+      <description>While working on my master&amp;rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the TimeseriesGenerator, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.
+Instead, I found another function called timeseries_dataset_from_array. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data.</description>
+    </item>
+    
+  </channel>
+</rss>

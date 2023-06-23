@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Preparing Time Series Data For Neural Network Inputs - Magnus Borresen</title><link rel="icon" type="image/png" href=/static/assets/img/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Methods for separating and batching data" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Preparing Time Series Data For Neural Network Inputs" />
+<meta property="og:description" content="Methods for separating and batching data" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://magnusborresen.com/posts/timeseriesgenerator-keras/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Preparing Time Series Data For Neural Network Inputs"/>
+<meta name="twitter:description" content="Methods for separating and batching data"/>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.7897b0157189f85b629cd1ef8a916bb8fc45e75abdf6c87f5a22030ab04fcce0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.c95c5dcf5f32f8b67bd36f7dab66680e068fce2b303087294114aabf7a7c080b.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://magnusborresen.com">Magnus Borresen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts/">Blog</a>
+		
+		<a href="/projects/">Projects</a>
+		
+		<a href="/ifil/">I Fail I Learn</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Preparing Time Series Data For Neural Network Inputs</h1>
+			<div class="meta">Posted on Apr 20, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<p>While working on my master&rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the <em>TimeseriesGenerator</em>, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.</p>
+<p>Instead, I found another function called <em>timeseries_dataset_from_array</em>. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data. But the <em>timeseries_dataset_from_array</em> function is super neat if you are working with a lot of data and are trying to save space.</p>
+<p>So the function is meant to create sliding windows over your array. The function is defined with the following parameters</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python3" data-lang="python3"><span style="display:flex;"><span>tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>timeseries_dataset_from_array(
+</span></span><span style="display:flex;"><span>    data,
+</span></span><span style="display:flex;"><span>    targets,
+</span></span><span style="display:flex;"><span>    sequence_length,
+</span></span><span style="display:flex;"><span>    sequence_stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    sampling_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">128</span>,
+</span></span><span style="display:flex;"><span>    shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>,
+</span></span><span style="display:flex;"><span>    seed<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>    start_index<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>    end_index<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>So you of course need to give it some data. You don&rsquo;t necessarily have to specify the targets. For my thesis, I was working with autoencoders for reconstruction. So my targets are the same as my data. Depending on your problem type, this could be the next data point (for regression), or a label if you are trying to classify your data.</p>
+<p>The next parameter you are going to want to set is the sequence length. This defined the number of consecutive time samples there will be in one output sample. With a caveat. If you set the sequence stride to anything lower than the sequence length, your output will be overlapped. Meaning if you set the sequence length to $256$ and you set the sequence stride to $128$, then for your first batch sample, all $256$ time samples will be unique. But for the second batch sample, there will be $128$ overlapped from the first batch sample and then $128$ unique samples. And so on.</p>
+<p>You can use the sample rate parameter to downsample your signal if needed. If you want all data points to be included in the output set, then set it to $1$.</p>
+<p>Then of course set the batch size to the size of the batches you need for training. The default is $128$, meaning there will be $128$ batches of $256$ time samples each.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/keras">keras</a></li>
+					
+					<li><a href="/tags/tensorflow">tensorflow</a></li>
+					
+					<li><a href="/tags/time-series">time-series</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Magnus Borresen |  <a
+      href="https://github.com/athul/archie">Archie Theme (modified)</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

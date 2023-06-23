@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Magnus Borresen</title>
+    <title>Home on Magnus Borresen</title>
     <link>https://magnusborresen.com/</link>
-    <description>Recent content on Magnus Borresen</description>
+    <description>Recent content in Home on Magnus Borresen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preparing Time Series Data For Neural Network Inputs</title>
+      <link>https://magnusborresen.com/posts/timeseriesgenerator-keras/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/timeseriesgenerator-keras/</guid>
+      <description>While working on my master&amp;rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the TimeseriesGenerator, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.
+Instead, I found another function called timeseries_dataset_from_array. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data.</description>
+    </item>
+    
+    <item>
+      <title>Triumph T509 horrible tank paint job. Warning it&#39;s horrible</title>
+      <link>https://magnusborresen.com/ifil/tank-paint/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/ifil/tank-paint/</guid>
+      <description>When I first go to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain alps with. I spent quite some time looking at ebay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998.
+I noticed on the ebay add that it had quite a lot of stickers on it, which I didn&amp;rsquo;t really like, but I bought it anyway and only ended up paying 1600 euros for it.</description>
+    </item>
+    
+    <item>
+      <title>Triumph T509 PCB keychain</title>
+      <link>https://magnusborresen.com/projects/t509-keychain/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/projects/t509-keychain/</guid>
+      <description>or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.</description>
+    </item>
+    
     <item>
       <title>Track-Before-Detect FMCW Radar Algorithm Exploration</title>
       <link>https://magnusborresen.com/projects/8th-semester/</link>
@@ -23,16 +52,7 @@
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
-      <description>This post was written as a part of my exam preperation for the course in Low Energy and Reconfigurable Systems at AAU. It is a writeup from a miniproject done in cooperation with two of my fellow students. The miniproject goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
-    </item>
-    
-    <item>
-      <title>Triumph T509 PCB keychain</title>
-      <link>https://magnusborresen.com/projects/t509-keychain/</link>
-      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/t509-keychain/</guid>
-      <description>or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.</description>
+      <description>This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU. It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
     </item>
     
     <item>
@@ -68,7 +88,8 @@
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/projects/6th-semester/</guid>
-      <description>My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 other people. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing. But they would only tell you if the printer started making “spaghetti”.</description>
+      <description>My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 of my fellow students. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing.
+However the current methods would only tell you if the printer started making “spaghetti”.</description>
     </item>
     
     <item>
@@ -119,30 +140,22 @@ The project was done in collaboration with FORCE Technology, who does EMC/EMI te
     </item>
     
     <item>
+      <title>Bode Plots in Python</title>
+      <link>https://magnusborresen.com/posts/bode-plots-in-python/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/bode-plots-in-python/</guid>
+      <description>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.
+Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using pip in your terminal or command prompt.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://magnusborresen.com/about/</link>
       <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/about/</guid>
       <description>Well I might as well start from the beginning. Ever since I was a kid I was always fascinated by inventors. All the cartoon characters like Dexter (from Dexters lab), Gyro Gearloose and the like was my favourite characters. So after finishing Danish “High School” studying the skill of trade in 2014. I took one semester at Aalborg University studying Global Business Engineering. After the first semester it didn’t seem like the right fit for me.</description>
-    </item>
-    
-    <item>
-      <title>posts</title>
-      <link>https://magnusborresen.com/posts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/</guid>
-      <description>posts</description>
-    </item>
-    
-    <item>
-      <title>posts</title>
-      <link>https://magnusborresen.com/posts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/</guid>
-      <description>posts</description>
     </item>
     
   </channel>

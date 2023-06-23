@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>control on Magnus Borresen</title>
+    <link>https://magnusborresen.com/tags/control/</link>
+    <description>Recent content in control on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/control/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bode Plots in Python</title>
+      <link>https://magnusborresen.com/posts/bode-plots-in-python/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/bode-plots-in-python/</guid>
+      <description>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.
+Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using pip in your terminal or command prompt.</description>
+    </item>
+    
+  </channel>
+</rss>

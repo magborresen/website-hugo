@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Magnus Borresen</title>
+    <link>https://magnusborresen.com/tags/python/</link>
+    <description>Recent content in python on Magnus Borresen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Magnus Borresen</copyright>
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preparing Time Series Data For Neural Network Inputs</title>
+      <link>https://magnusborresen.com/posts/timeseriesgenerator-keras/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/timeseriesgenerator-keras/</guid>
+      <description>While working on my master&amp;rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the TimeseriesGenerator, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.
+Instead, I found another function called timeseries_dataset_from_array. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data.</description>
+    </item>
+    
+    <item>
+      <title>Bode Plots in Python</title>
+      <link>https://magnusborresen.com/posts/bode-plots-in-python/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/posts/bode-plots-in-python/</guid>
+      <description>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.
+Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using pip in your terminal or command prompt.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -14,7 +14,7 @@
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
-      <description>This post was written as a part of my exam preperation for the course in Low Energy and Reconfigurable Systems at AAU. It is a writeup from a miniproject done in cooperation with two of my fellow students. The miniproject goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
+      <description>This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU. It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
     </item>
     
   </channel>

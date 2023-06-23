@@ -7,13 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>keras</title>
+      <link>https://magnusborresen.com/tags/keras/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/keras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://magnusborresen.com/tags/python/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://magnusborresen.com/tags/tensorflow/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time-series</title>
+      <link>https://magnusborresen.com/tags/time-series/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/time-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>motorcycle</title>
+      <link>https://magnusborresen.com/tags/motorcycle/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/motorcycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repair</title>
+      <link>https://magnusborresen.com/tags/repair/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/repair/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aisler</title>
       <link>https://magnusborresen.com/tags/aisler/</link>
-      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/tags/aisler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kicad</title>
+      <link>https://magnusborresen.com/tags/kicad/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/kicad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pcb</title>
+      <link>https://magnusborresen.com/tags/pcb/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/pcb/</guid>
       <description></description>
     </item>
     
@@ -45,29 +117,11 @@
     </item>
     
     <item>
-      <title>kicad</title>
-      <link>https://magnusborresen.com/tags/kicad/</link>
-      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/kicad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>math</title>
       <link>https://magnusborresen.com/tags/math/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pcb</title>
-      <link>https://magnusborresen.com/tags/pcb/</link>
-      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/pcb/</guid>
       <description></description>
     </item>
     
@@ -86,6 +140,15 @@
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/tags/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>control</title>
+      <link>https://magnusborresen.com/tags/control/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/tags/control/</guid>
       <description></description>
     </item>
     

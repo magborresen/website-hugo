@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Bode Plots in Python - Magnus Borresen</title><link rel="icon" type="image/png" href=/static/assets/img/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Bode Plot In Python" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Bode Plots in Python" />
+<meta property="og:description" content="Bode Plot In Python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://magnusborresen.com/posts/bode-plots-in-python/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-11-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bode Plots in Python"/>
+<meta name="twitter:description" content="Bode Plot In Python"/>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.7897b0157189f85b629cd1ef8a916bb8fc45e75abdf6c87f5a22030ab04fcce0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.c95c5dcf5f32f8b67bd36f7dab66680e068fce2b303087294114aabf7a7c080b.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+
+	
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://magnusborresen.com">Magnus Borresen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts/">Blog</a>
+		
+		<a href="/projects/">Projects</a>
+		
+		<a href="/ifil/">I Fail I Learn</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Bode Plots in Python</h1>
+			<div class="meta">Posted on Nov 5, 2018</div>
+		</div>
+		
+
+		<section class="body">
+			<p>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&rsquo;ll look at an actual transfer function and derive all the information from that.</p>
+<p>Let&rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using <code>pip</code> in your terminal or command prompt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> control
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> signal
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> control <span style="color:#f92672">import</span> tf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>matplotlib inline
+</span></span><span style="display:flex;"><span>matplotlib<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;figure.facecolor&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;w&#39;</span>
+</span></span></code></pre></div><p>Now let&rsquo;s define the transfer function that we are going to look at. We&rsquo;ll look at an open loop transfer function from a mechanical system that is regulated. The method will work for transfer function in mechanics and electronics though</p>
+<p>$$OL(s)=20\cdot \frac{300}{(0,01s+1)(0,1s+1)}\cdot 0,0033$$</p>
+<p>Now to actually use the python libraries, we want the transfer function to be on a different form. The form should be $s^2+s+k$. So we&rsquo;ll make sure to dissolve the parantheses in the denominator</p>
+<p>$$OL(s)=20\cdot \frac{300}{0,001s^2+0,011s+1}\cdot 0,0033$$</p>
+<p>Now that we have the expression in the correct form, we can put it into our first Python function. The function comes from the class<code>signal</code> from the <code>scipy</code> library. We imported it just before by saying <code>from scipy import signal</code>. Now we are going to use a method from that class called <code>lti</code>. <code>lti</code> takes in several parameters, but we are only going to use two of them in this example. The first parameter is the <strong>numerator</strong> of our transfer function. The input should be in brackets <code>[]</code> and we are going to multiply everything together. So the first input would be <code>[20*300*0.0033]</code>.</p>
+<p>The second input will be the <strong>denominator</strong> of our transfer function. So we have $0,001s^2+0,11+1$. If we remove the $s$&rsquo;s we get the second parameter which would then be <code>[0.001, 0.11, 1]</code>. As you can see we seperate the values by a comma.</p>
+<p>Now let&rsquo;s put all of this into our class method and assign it to the variable <code>system</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>system <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>lti([<span style="color:#ae81ff">20</span><span style="color:#f92672">*</span><span style="color:#ae81ff">300</span><span style="color:#f92672">*</span><span style="color:#ae81ff">0.0033</span>], [<span style="color:#ae81ff">0.001</span>, <span style="color:#ae81ff">0.11</span>, <span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><p>Now the <code>signal.lti</code> doesn&rsquo;t do much for us. We want to have a bode plot, so we&rsquo;ll have to use yet another method from the <code>signal</code> class to create the bode plot. The method <code>signal.bode</code> will do the trick. This returns three things: a frequency array in rad/s, a magnitude array in dB, and a phase array in degrees.</p>
+<p>So when we call this method we want to assign in to three different variables. The first return value will be the frequency array and we&rsquo;ll assign that to the variable <code>w</code>. The next return value will be the magnitude array and we&rsquo;ll assign that to the variable <code>mag</code>. The last return value will be the phase array and we&rsquo;ll assign that to the variable <code>phase</code>.</p>
+<p>We&rsquo;ll also need to tell the program the range of frequencies we want to look at (this is optional though). To do this we assign the variable <code>r</code> to the built in python function <code>range(0, 10000)</code> which will give us a bode plot of frequencies between 0 and 10.000. So when we call <code>signal.bode</code> we&rsquo;ll first input our variable <code>system</code>. Then we&rsquo;ll set the optional parameter <code>w</code> equal to <code>r</code>.</p>
+<p>Let&rsquo;s try it out</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>r <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>w, mag, phase <span style="color:#f92672">=</span> signal<span style="color:#f92672">.</span>bode(system, w<span style="color:#f92672">=</span>r)
+</span></span></code></pre></div><p>Okay so now we have our variables <code>w</code>, <code>mag</code> and <code>phase</code> assigned. But they just contain a really long list of a lot of numbers. What we want to do then is to plot all those numbers. To do that, we&rsquo;ll use the <code>pyplot</code> class from the matplotlib library which we imported earlier by saying <code>import matplotlib.pyplot as plt</code> which means we can now just reference it by calling <code>plt.someMethod()</code>.</p>
+<p>So we&rsquo;ll create a new figure by calling <code>plt.figure()</code>. Then we&rsquo;ll make sure that we can see the logarithmic lines in the plot by calling <code>plt.grid(True, which=&quot;both&quot;)</code>. Then the last thing to do is the actual plot. We&rsquo;ll start off by plotting the magnitude. So we want the angular speed on the x-axis, which was <code>w</code> and the magnitude on the y-axis, which was <code>mag</code>. So to plot it we&rsquo;ll call <code>plt.semilogx(w, mag)</code> since it&rsquo;s only the x-axis that&rsquo;s logarithmic.</p>
+<p>To plot the phase we&rsquo;ll do exactly the same. Only when we call <code>plt.semilogx()</code> we&rsquo;ll input <code>w</code> and <code>phase</code> instead.</p>
+<p>To show the plot&rsquo;s call <code>plt.show()</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>, which<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;both&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>semilogx(w, mag)    <span style="color:#75715e"># Bode magnitude plot</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;[dB]&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;[rad/s]&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>, which<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;both&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>semilogx(w, phase)  <span style="color:#75715e"># Bode phase plot</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;[degrees]&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;[rad/s]&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure><img src="output_7_0.png"/>
+</figure>
+
+<figure><img src="output_7_1.png"/>
+</figure>
+
+<p>All of this is really great. But it can be kind of messy to actually read values of a semi logarithmic plot. So to get around that, we&rsquo;ll use another library that really comes in handy in both mechanics and electronics. It&rsquo;s call <code>control</code> and we imported it at the beginning of the notebook. It gives us a lot of capabilities to find characteristics of our transfer function.</p>
+<p>In the beginning of the notebook we called the following <code>from control import tf</code>. Which means that we can now use all the functionality of the <code>tf</code> class. So we&rsquo;ll create a <code>tf</code> object and assign it to the variable <code>sys</code>. The <code>tf</code> object basicly behaves like the <code>signal.lti</code> object that we used before, so we&rsquo;ll give it exactly the same input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sys <span style="color:#f92672">=</span> tf([<span style="color:#ae81ff">20</span><span style="color:#f92672">*</span><span style="color:#ae81ff">300</span><span style="color:#f92672">*</span><span style="color:#ae81ff">0.0033</span>], [<span style="color:#ae81ff">0.001</span>, <span style="color:#ae81ff">0.11</span>, <span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><p>Now comes the fun part. We can use the function <code>control.margin</code> to find out all the margins of our system. Which is all of the things that we would otherwise have had to decifer from our bode plots. So we&rsquo;ll call <code>control.margin(sys)</code> and assign it to four variables <code>gm</code>, <code>pm</code>, <code>wg</code>, <code>wp</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gm, pm, wg, wp <span style="color:#f92672">=</span> control<span style="color:#f92672">.</span>margin(sys)
+</span></span></code></pre></div><p>Now <code>gm</code> will output our <strong>Gain Margin</strong> which in this case is $\infty$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gm
+</span></span></code></pre></div><pre><code>    inf
+</code></pre>
+<p><code>pm</code> will be our <strong>Phase Margin</strong> which will have a value in degrees</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pm
+</span></span></code></pre></div><pre><code>    43.51277688046244
+</code></pre>
+<p>In this case we do not have a <strong>Frequency For Gain margin</strong> which would be <code>wg</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wg
+</span></span></code></pre></div><pre><code>    nan
+</code></pre>
+<p>Now the last variable is <code>wp</code> which gives us the <strong>Frequency For Phase Margin</strong> which we do have in this case. The value is in dB</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wp
+</span></span></code></pre></div><pre><code>    123.93293689252836
+</code></pre>
+<p>The control library can also be used to find the poles of the transfer function. Simply call <code>control.pole()</code> and input the <code>sys</code> variable into the parantheses.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>control<span style="color:#f92672">.</span>pole(sys)
+</span></span></code></pre></div><pre><code>    array([-100.+0.j,  -10.+0.j])
+</code></pre>
+<p>In this case we have a pole at $-10$ and $-100$. To find zeroes we can just call <code>control.zero()</code> and input the sys variable. But there are no zeroes in this transfer function.</p>
+<p>The last thing we want to see is the DC Gain of the system. This is found by calling <code>control.dcgain()</code> and inputting the sys <code>variable</code> in the parantheses.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>control<span style="color:#f92672">.</span>dcgain(sys)
+</span></span></code></pre></div><pre><code>    19.8
+</code></pre>
+<p><em><strong>And we are done</strong></em></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/control">control</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Magnus Borresen |  <a
+      href="https://github.com/athul/archie">Archie Theme (modified)</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

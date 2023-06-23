@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python</title>
+      <link>https://magnusborresen.com/categories/python/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>motorcycle</title>
+      <link>https://magnusborresen.com/categories/motorcycle/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/motorcycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PCB-art</title>
+      <link>https://magnusborresen.com/categories/pcb-art/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://magnusborresen.com/categories/pcb-art/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>university</title>
       <link>https://magnusborresen.com/categories/university/</link>
@@ -23,15 +50,6 @@
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://magnusborresen.com/categories/dsp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PCB-art</title>
-      <link>https://magnusborresen.com/categories/pcb-art/</link>
-      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/pcb-art/</guid>
       <description></description>
     </item>
     

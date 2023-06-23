@@ -3,22 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://magnusborresen.com/categories/</loc>
-    <lastmod>2022-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/</loc>
-    <lastmod>2022-06-14T00:00:00+00:00</lastmod>
+    <loc>https://magnusborresen.com/tags/keras/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/posts/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/posts/timeseriesgenerator-keras/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/python/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/categories/python/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/tensorflow/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/time-series/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/ifil/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/motorcycle/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/categories/motorcycle/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/repair/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/ifil/tank-paint/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/aisler/</loc>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/kicad/</loc>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/pcb/</loc>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/categories/pcb-art/</loc>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://magnusborresen.com/projects/</loc>
-    <lastmod>2022-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/projects/t509-keychain/</loc>
+    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://magnusborresen.com/projects/8th-semester/</loc>
     <lastmod>2022-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://magnusborresen.com/categories/university/</loc>
     <lastmod>2022-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/tags/aisler/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://magnusborresen.com/tags/cordic/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
@@ -35,25 +83,7 @@
     <loc>https://magnusborresen.com/tags/fpga/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/kicad/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://magnusborresen.com/tags/math/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/tags/pcb/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/categories/pcb-art/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/posts/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/tags/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/projects/t509-keychain/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://magnusborresen.com/tags/design/</loc>
@@ -101,11 +131,16 @@
     <loc>https://magnusborresen.com/projects/1st-semester/</loc>
     <lastmod>2018-12-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://magnusborresen.com/posts/bode-plots-in-python/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://magnusborresen.com/tags/control/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://magnusborresen.com/about/</loc>
     <lastmod>2016-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/posts/</loc>
-  </url><url>
-    <loc>https://magnusborresen.com/posts/</loc>
+    <loc>https://magnusborresen.com/</loc>
+    <lastmod>2016-11-05T00:00:00+00:00</lastmod>
   </url>
 </urlset>
