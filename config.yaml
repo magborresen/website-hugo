@@ -1,49 +1,27 @@
-baseURL: https://example.com
+baseURL: 'https://magnusborresen.com'
 languageCode: en-us
-defaultContentLanguage: en
 title: Magnus Borresen
-theme: cupper-hugo-theme
-googleAnalytics: UA-123456789-1
-disqusShortname: yourdiscussshortname
-enableGitInfo: true
-
-taxonomies:
-  tag: tags
-
-permalinks:
-  post: /:filename/
-
-imaging:
-  quality: 99
-
+theme: archie
+copyright: © Magnus Borresen
+pygmentsstyle: monokai
+pygmentscodefences: true
+pygmentscodefencesguesssyntax: true
 params:
-  description: Personal blog and vomitting about the weird projects I do
-  homeMetaContent: Parental Guidance, stupid language and actions may occur
-  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
-  # For more date formats see https://gohugo.io/functions/format/
-  dateFormat: Jan 2, 2006
-  codePenUser: someUser
+  mode: auto
+  useCDN: true
   katex: true
-  hideHeaderLinks: false
-  search: true
-  showThemeSwitcher: true
-  defaultDarkTheme: false
-  moveFooterToHeader: false
-  navTitleText: Magnus Borresen
-  logoAlt: An alternative text description of the logo
-  customCss:
-    - css/custom_01.css
-    - css/custom_02.css
-  customJs:
-    - js/custom_01.js
-    - js/custom_02.js
-  utterances:
-    repo: username/username.github.io
-    issueTerm: title
-    theme: github-light
+  subtitle: 'Personal blog and vomitting about the weird projects I do'
+  favicon: '/static/assets/img/favicon.ico'
+  social:
+    - name: GitHub
+      icon: github
+      url: 'https://github.com/athul/magborresen'
+    - name: LinkedIn
+      icon: linkedin
+      url: 'https://www.linkedin.com/in/mag-borresen/'
 
 menu:
-  nav:
+  main:
     - name: Home
       url: /
       weight: 1
@@ -56,35 +34,3 @@ menu:
     - name: I Fail I Learn
       url: /IFIL/
       weight: 4
-
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    extensions:
-      definitionList: true
-      footnote: true
-      linkify: true
-      strikethrough: true
-      table: true
-      taskList: true
-      typographer: true
-    parser:
-      attribute: true
-      autoHeadingID: true
-    renderer:
-      hardWraps: false
-      unsafe: true
-      xHTML: false
-  highlight:
-    codeFences: true
-    hl_Lines: ""
-    lineNoStart: 1
-    lineNos: true
-    lineNumbersInTable: true
-    noClasses: true
-    style: monokai
-    tabWidth: 4
-    guessSyntax: true
-  tableOfContents:
-    endLevel: 6
-    startLevel: 2

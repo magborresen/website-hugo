@@ -1,14 +1,15 @@
 ---
 categories: python
 date: "2023-04-20"
-description: Methods for seperating and batching data
+description: Methods for separating and batching data
 tags: ["python", "keras", "tensorflow", "time-series"]
 author: ["me"]
 title: Preparing Time Series Data For Neural Network Inputs
-draft: true
+katex: true
+draft: false
 ---
 
-While working on my master thesis I was in need of processing temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the *TimeseriesGenerator*, which is a function from the Keras library. However this is no longer recommended to be used by TensorFlow.
+While working on my master's thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the *TimeseriesGenerator*, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.
 
 Instead, I found another function called *timeseries_dataset_from_array*. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data. But the *timeseries_dataset_from_array* function is super neat if you are working with a lot of data and are trying to save space. 
 
