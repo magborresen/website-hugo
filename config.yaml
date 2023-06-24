@@ -11,7 +11,7 @@ params:
   useCDN: true
   katex: true
   subtitle: 'Personal blog and vomitting about the weird projects I do'
-  favicon: '/static/assets/img/favicon.ico'
+  favicon: 'assets/img/favicon.ico'
   social:
     - name: GitHub
       icon: github
