@@ -9,7 +9,7 @@ pygmentscodefencesguesssyntax: true
 params:
   mode: auto
   useCDN: true
-  katex: true
+  mathjax: true
   subtitle: 'Personal blog and vomitting about the weird projects I do'
   favicon: 'assets/img/favicon.ico'
   social:
