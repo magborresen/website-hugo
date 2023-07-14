@@ -3,7 +3,7 @@ date: "2016-11-05"
 title: "Home"
 ---
 
-Well, I might as well start from the beginning. Ever since I was a kid I was always fascinated by inventors. All the cartoon characters like Dexter (from Dexter's lab), Gyro Gearloose and the like were my favorite characters. So after finishing Danish “High School” studying the skill of trade in 2014. I took one semester at Aalborg University studying Global Business Engineering. After the first semester it didn’t seem like the right fit for me. Maybe I was too focused on the engineering title.
+Well, I might as well start from the beginning. Ever since I was a kid I was always fascinated by inventors. All the cartoon characters like Dexter (from Dexter's lab), Gyro Gearloose and the like were my favorite characters. So after finishing Danish “High School” studying the skill of trade in 2014. I took one semester at Aalborg University studying Global Business Engineering. After the first semester, it didn’t seem like the right fit for me. Maybe I was too focused on the engineering title.
 
 Anyway, I had always thought that a career in shipping seemed pretty exciting. Fast pace, long hours and lots of travel. Just what I liked. So naturally after dropping out of university, I started looking for apprenticeships. After a lot of interviews and even more applications, Danish Crown called me and said they wanted me to start a couple of months later.
 

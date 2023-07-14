@@ -31,9 +31,13 @@ SimScape is a language that builds on top of Simulink and the models created wit
 
 Meaning we needed to create a model from scratch. So we first need to define the mathematics that will be used for implementation. There are different opinions in litterature as to how such a model should be defined. I will show you the method that I chose and explain the differenced along the way. 
 
+# Healthy Motor Model
+
 The electrical equivalent model of a healthy (right) and faulted (left) PMSM is shown in the figure below
 
 {{< figure src="fault_electrical_model.PNG" title="Electrical model of healthy (right) and faulted (left) PMSM" >}}
+
+This model has been implemented based on the equations and methods described in [^2].
 
 Next, we can set up the defining equations for such a model for the healthy case of the motor. As the motor has three phases that is each driven using a supply voltage, the equation for phase voltages can be given as 
 
@@ -85,7 +89,24 @@ $$e_{abc} = \omega \psi_m \begin{bmatrix} cos\theta_e \\\\
 
 Here, $\omega$ is the speed of the rotor, $\psi_m$ is the permanent magnetic flux of the motor. 
 
+As you can see from the equations, everything is referenced to phase A (U) of the motor. The calculations for the two other phases are shifted in the cosine expressions.
+
+Lastly, we must define the output of the motor, which will be the electromagnetic torque. This is the torque seen at the electrical side of the rotor shaft of the motor.
+
+$$ T_E = P_P\left(\frac{1}{2}i^T_{abc} \frac{dL_{abc}}{d\theta_e} + \frac{i_{abc}^T e_{abc}}{\omega} \right) $$
+
+Again we've got a few new variables to take care of. So $P_P$ is the number of pole pairs in the motor. This number can fluctuate a lot between the motor models. The source of these equations points to that they are only valid for $P_P=1$. The second new variable is $\omega$, which represents the speed of the rotor. When implementing in SimScape, it is possible to get the angle output of the motor, where the speed is the derivative of the angle, as shown by classical mechanics. 
+
+Now we basically have the mathematical description of a healthy motor, let's then look at what it takes to alter these equations to reprensented a motor with various levels of inter-turn faults.
+
+# Faulted Motor Model
+
+To implement a faulted model as the one shown in the previous image, it is necessary to make a few altercations to the equations that I described before. What happens when the coating between the individual windings starts to wear away, is that another coil is created due to the short circuit between the windings. This new coil will have its own charactestics just as the normal coil. We must therefore define a resistance and inductance for this new coil, along with adding the effect of the extra back-EMF produced. 
+
+Practically, this means expanding the previous matrices with another row and column. 
+
 
 [//]: # (Source Section) 
 
 [^1]: [Review of Methods for Diagnosing Fault in the Stators of BLDC Motors](URL "https://www.mdpi.com/2227-9717/11/1/82")
+[^2]: [Interior Permanent Magnet Synchronous Motor Stator Winding Fault Modelling](URL "https://www.sciencedirect.com/science/article/pii/S2405896315008307")

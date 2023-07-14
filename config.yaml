@@ -10,7 +10,7 @@ params:
   mode: auto
   useCDN: true
   mathjax: true
-  subtitle: 'Personal blog and vomitting about the weird projects I do'
+  subtitle: 'My personal blog and vomitting about the weird projects I do.'
   favicon: 'assets/img/favicon.ico'
   social:
     - name: GitHub
