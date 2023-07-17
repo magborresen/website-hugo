@@ -103,7 +103,9 @@ Now we basically have the mathematical description of a healthy motor, let's the
 
 To implement a faulted model as the one shown in the previous image, it is necessary to make a few altercations to the equations that I described before. What happens when the coating between the individual windings starts to wear away, is that another coil is created due to the short circuit between the windings. This new coil will have its own charactestics just as the normal coil. We must therefore define a resistance and inductance for this new coil, along with adding the effect of the extra back-EMF produced. 
 
-Practically, this means expanding the previous matrices with another row and column. 
+Practically, this means expanding the previous matrices with another row and column.
+
+What we are expanding with, is a multiple of the ratio between healthy and faulted winding in the motor. This value is defined by $\sigma = \frac{N_f}{N_{tot}}$. Meaning the ratio between the faulted and total number of windings in the coil. 
 
 
 [//]: # (Source Section) 
