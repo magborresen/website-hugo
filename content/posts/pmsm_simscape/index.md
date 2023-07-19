@@ -84,7 +84,7 @@ With $L_s$ being the series inductances of the motor phases, $L_m$ is the mutual
 Lastly, we must define the back-EMF, which is the $e_{abc}$ from the voltage equation. The back-EMF is a voltage source within the motor and for a PMSM it will produce a sinusoidal voltage.
 
 $$e_{abc} = \omega \psi_m \begin{bmatrix} cos\theta_e \\\\ 
-                                        cos\theta_e - 2\pi / 3 \\\\ 
+                                        cos\theta_e + 2\pi / 3 \\\\ 
                                         cos\theta_e - 2\pi / 3 \end{bmatrix} $$
 
 Here, $\omega$ is the speed of the rotor, $\psi_m$ is the permanent magnetic flux of the motor. 
@@ -107,6 +107,76 @@ Practically, this means expanding the previous matrices with another row and col
 
 What we are expanding with, is a multiple of the ratio between healthy and faulted winding in the motor. This value is defined by $\sigma = \frac{N_f}{N_{tot}}$. Meaning the ratio between the faulted and total number of windings in the coil. 
 
+We can then rewrite the resistance matrix into
+
+$$ R_{abcf} = \begin{bmatrix} 
+                R_s & 0 & 0 & 0 \\\\
+                0 & (1-\sigma)R_s & 0 & 0 \\\\
+                0 & 0 & R_s & 0 \\\\
+                0 & 0 & 0 & \sigma R_s
+            \end{bmatrix} $$
+
+The matrix shows that a fourth column and row has been added with the resistance value of the new faulted coil. The resistances in the faulted B phase is reduced linearly with to the remainder of the otherwise healthy turns.
+
+Having done this, we must also add an extra row to the current vector since we will now have a circulating current in phase B.
+
+$$ i_{abcf} = \begin{bmatrix}
+                i_a \\\\
+                i_b \\\\
+                i_c \\\\
+                i_f
+            \end{bmatrix} $$
+
+The newly created faulted coil also affects the inductance matrix. So like we did in the resistance matrix, we must add another row and column in order to accomodate. Changes must be made to all inductances that are influenced by phase B. Thus not only the series inductances but the mutual inductances as well.
+
+$$ L_{abcf} = \begin{bmatrix}
+                L_{aa} & L_{ab} & L_{ac} & \sigma L_{ab} \\\\
+                (1-\sigma)L_{ba} & (1-\sigma)^2L_{bb} & (1-\sigma)L_{bc} & (1-\sigma)\sigma L_{bb} \\\\
+                L_{ca} & (1-\sigma)L_{cb} & L_{cc} & \sigma L_{cb} \\\\
+                \sigma L_{ba} & (1-\sigma)\sigma L_{bb} & \sigma L_{bc} & \sigma^2 L_{bb} 
+            \end{bmatrix}
+$$
+
+From this, it can easily be seen that not all the elements of the matrix are scaled linarly with the changes to $\sigma$. My experience is that this unfortunately leaves the matrix being ill-conditioned. The ill-conditioning makes it hard for the system to converge in complex system setups within Simulink. However this does work in less complex simulation models.
+
+Lastly, we must modify the vector that contains the expressions for the back-EMF. Since we have now added a new coil to the model, there will be an additional unit of back-EMF. The expression for the back-EMF of phase B will also change accordingly.
+
+$$e_{abcf} = \omega \psi_m \begin{bmatrix} cos(\theta_e) \\\\ 
+                                        (1-\sigma)cos(\theta_e - \frac{2\pi}{3}) \\\\ 
+                                        cos(\theta_e + \frac{2\pi}{3}) \\\\
+                                        \sigma cos(\theta_e - \frac{2\pi}{3})
+                                        \end{bmatrix} 
+                                        $$
+
+Now that we have redefined all of our matrices and vectors, it is time to write up the new expression for calculating the voltage in each phase. This will be a vector calculation as we will get a voltage in phase A, B, C and the faulted phase called F.
+
+$$ v_{abcf} = R_{abcf} i_{abcf} + L_{abc} \frac{di_{abc}}{dt} + i_{abcf} \frac{dL_{abcf}}{dt} + e_{abc} $$
+
+As you can see, we have some expressions of the inductance matrix and currents that require derivatives. The derivative of the current can be found using SimScape when the model has been implemented. But the time derivative of the inductance matrix must be defined now. This is easily done though.
+
+$$\frac{dL_{aa}}{dt} = 2\omega \cdot L_{\Delta}cos(2\theta_e)$$
+$$\frac{dL_{bb}}{dt} = 2\omega \cdot L_{\Delta}cos(2(\theta_e - 2\pi / 3))$$
+$$\frac{dL_{cc}}{dt} = 2\omega \cdot L_{\Delta}cos(2(\theta_e + 2\pi / 3))$$
+$$\frac{dL_{ab}}{dt} = 2\omega \cdot L_{\Delta}cos(2(\theta_e + \pi/6))$$
+$$\frac{dL_{ac}}{dt} = 2\omega \cdot L_{\Delta}cos(2(\theta_e + \pi/6) + 2\pi / 3)$$
+$$\frac{dL_{bc}}{dt} = 2\omega \cdot L_{\Delta}cos(2(\theta_e + \pi/6) - 2\pi / 3)$$
+
+Now we need to redefine how the torque is produced. We've previously set up an equation for the electromechanical torque seen at the rotor shaft. But now we need to take our now values into account. 
+
+$$ T_E = P_P\left(\frac{1}{2}i^T_{abcf} \frac{dL_{abcf}}{d\theta_e} + \frac{i_{abcf}^T e_{abcf}}{\omega} \right) $$
+
+With the angular derivative of the inductance matrix being defined as
+
+$$\frac{dL_{aa}}{dt} = 2 \cdot L_{\Delta}cos(2\theta_e)$$
+$$\frac{dL_{bb}}{dt} = 2 \cdot L_{\Delta}cos(2(\theta_e - 2\pi / 3))$$
+$$\frac{dL_{cc}}{dt} = 2 \cdot L_{\Delta}cos(2(\theta_e + 2\pi / 3))$$
+$$\frac{dL_{ab}}{dt} = 2 \cdot L_{\Delta}cos(2(\theta_e + \pi/6))$$
+$$\frac{dL_{ac}}{dt} = 2 \cdot L_{\Delta}cos(2(\theta_e + \pi/6) + 2\pi / 3)$$
+$$\frac{dL_{bc}}{dt} = 2 \cdot L_{\Delta}cos(2(\theta_e + \pi/6) - 2\pi / 3)$$
+
+Now we've got all of our values in check. We can then start looking at how we implement this into a SimScape model. 
+
+# SimScape Model Implementation
 
 [//]: # (Source Section) 
 
