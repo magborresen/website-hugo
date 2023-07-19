@@ -180,5 +180,5 @@ Now we've got all of our values in check. We can then start looking at how we im
 
 [//]: # (Source Section) 
 
-[^1]: [Review of Methods for Diagnosing Fault in the Stators of BLDC Motors](URL "https://www.mdpi.com/2227-9717/11/1/82")
-[^2]: [Interior Permanent Magnet Synchronous Motor Stator Winding Fault Modelling](URL "https://www.sciencedirect.com/science/article/pii/S2405896315008307")
+[^1]: [Review of Methods for Diagnosing Fault in the Stators of BLDC Motors](https://www.mdpi.com/2227-9717/11/1/82)
+[^2]: [Interior Permanent Magnet Synchronous Motor Stator Winding Fault Modelling](https://www.sciencedirect.com/science/article/pii/S2405896315008307)

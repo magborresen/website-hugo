@@ -7,7 +7,7 @@ author: ["me"]
 title: How to run a Netlify build when uploading changes to a Git submodule
 ---
 
-Before I start writing anything in this post, I will say that the method I am going to explain comes from a blog post over at [flaviopost](URL "https://flaviocopes.com/netlify-deploy-git-submodule-github-actions/"). I did not like the very short explanation as a rookie on his site, so I'll try to elaborate here.
+Before I start writing anything in this post, I will say that the method I am going to explain comes from a blog post over at [flaviopost](https://flaviocopes.com/netlify-deploy-git-submodule-github-actions/). I did not like the very short explanation as a rookie on his site, so I'll try to elaborate here.
 
 What is the issue even to start with? 
 
@@ -21,7 +21,7 @@ So today's objective is simple, make Netflify react to pushes in the submodule r
 
 We can start by looking at the Netlify API and GitHub actions. If you're not using GitHub to store your repositories, I'm sure your provider allows for something similar. 
 
-Step one is to go to [netflify](URL "netlify.com"). Then log in and go to the dashboard of the website in question.
+Step one is to go to [netflify](https://netlify.com). Then log in and go to the dashboard of the website in question.
 
 In the menu pane to the left, you'll find an options that says __Site Configuration__. Go there and then you'll see a new menu appear. In the new menu, you go to __Build & Deploy__. 
 
