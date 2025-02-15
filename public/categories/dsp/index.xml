@@ -1,40 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dsp on Magnus Borresen</title>
-    <link>https://magnusborresen.com/categories/dsp/</link>
-    <description>Recent content in dsp on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Dsp on Magnus Borresen</title>
+    <link>http://localhost:1313/categories/dsp/</link>
+    <description>Recent content in Dsp on Magnus Borresen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/dsp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/dsp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fixed Point CORDIC</title>
-      <link>https://magnusborresen.com/posts/fixed-point-cordic/</link>
+      <link>http://localhost:1313/posts/fixed-point-cordic/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
-      <description>This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU. It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
+      <guid>http://localhost:1313/posts/fixed-point-cordic/</guid>
+      <description>&lt;p&gt;This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU.&#xA;It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation. Actually, it also goes through the mathematical derivation of the CORDIC algorithm, but I won&amp;rsquo;t bore you with that. You just need to know that the algorithm uses &amp;ldquo;microrotations&amp;rdquo; to match the angle using the math below&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Raspberry Pi Hearing Tester</title>
-      <link>https://magnusborresen.com/projects/1st-semester/</link>
+      <link>http://localhost:1313/projects/1st-semester/</link>
       <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/1st-semester/</guid>
-      <description>The first semester project I did was in a project group with 6 of my fellow students. The frame of the project was to get started with electronics, microcontrollers and single board computers. Being at Aalborg University, the project also had to relate the the UN World Goals. We decided on a project that would help uncover hearing disabilities and educate young people in the public schools. The below is the abstract from the project report</description>
+      <guid>http://localhost:1313/projects/1st-semester/</guid>
+      <description>&lt;p&gt;The first semester project I did was in a project group with 6 of my fellow students. The frame of the project was to get started with electronics, microcontrollers and single board computers. Being at Aalborg University, the project also had to relate the the UN World Goals. We decided on a project that would help uncover hearing disabilities and educate young people in the public schools. The below is the abstract from the project report&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bode Plots in Python</title>
-      <link>https://magnusborresen.com/posts/bode-plots-in-python/</link>
+      <link>http://localhost:1313/posts/bode-plots-in-python/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/bode-plots-in-python/</guid>
-      <description>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.
-Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using pip in your terminal or command prompt.</description>
+      <guid>http://localhost:1313/posts/bode-plots-in-python/</guid>
+      <description>&lt;p&gt;This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using &lt;code&gt;pip&lt;/code&gt; in your terminal or command prompt.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

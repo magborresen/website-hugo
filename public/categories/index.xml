@@ -2,92 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Magnus Borresen</title>
-    <link>https://magnusborresen.com/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>python</title>
-      <link>https://magnusborresen.com/categories/python/</link>
+      <title>Netlify</title>
+      <link>http://localhost:1313/categories/netlify/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/netlify/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/categories/python/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/python/</guid>
+      <guid>http://localhost:1313/categories/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>motorcycle</title>
-      <link>https://magnusborresen.com/categories/motorcycle/</link>
+      <title>Motorcycle</title>
+      <link>http://localhost:1313/categories/motorcycle/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/motorcycle/</guid>
+      <guid>http://localhost:1313/categories/motorcycle/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>PCB-art</title>
-      <link>https://magnusborresen.com/categories/pcb-art/</link>
+      <title>PCB-Art</title>
+      <link>http://localhost:1313/categories/pcb-art/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/pcb-art/</guid>
+      <guid>http://localhost:1313/categories/pcb-art/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>university</title>
-      <link>https://magnusborresen.com/categories/university/</link>
+      <title>University</title>
+      <link>http://localhost:1313/categories/university/</link>
       <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/university/</guid>
+      <guid>http://localhost:1313/categories/university/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dsp</title>
-      <link>https://magnusborresen.com/categories/dsp/</link>
+      <title>Dsp</title>
+      <link>http://localhost:1313/categories/dsp/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/dsp/</guid>
+      <guid>http://localhost:1313/categories/dsp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Electronics-Design</title>
-      <link>https://magnusborresen.com/categories/electronics-design/</link>
+      <link>http://localhost:1313/categories/electronics-design/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/electronics-design/</guid>
+      <guid>http://localhost:1313/categories/electronics-design/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>acoustics</title>
-      <link>https://magnusborresen.com/categories/acoustics/</link>
+      <title>Acoustics</title>
+      <link>http://localhost:1313/categories/acoustics/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/acoustics/</guid>
+      <guid>http://localhost:1313/categories/acoustics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>machine learning</title>
-      <link>https://magnusborresen.com/categories/machine-learning/</link>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/categories/machine-learning/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/machine-learning/</guid>
+      <guid>http://localhost:1313/categories/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>neural networks</title>
-      <link>https://magnusborresen.com/categories/neural-networks/</link>
+      <title>Neural Networks</title>
+      <link>http://localhost:1313/categories/neural-networks/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/categories/neural-networks/</guid>
+      <guid>http://localhost:1313/categories/neural-networks/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

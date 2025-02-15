@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PCB-art on Magnus Borresen</title>
-    <link>https://magnusborresen.com/categories/pcb-art/</link>
-    <description>Recent content in PCB-art on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>PCB-Art on Magnus Borresen</title>
+    <link>http://localhost:1313/categories/pcb-art/</link>
+    <description>Recent content in PCB-Art on Magnus Borresen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/pcb-art/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/pcb-art/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Triumph T509 PCB keychain</title>
-      <link>https://magnusborresen.com/projects/t509-keychain/</link>
+      <link>http://localhost:1313/projects/t509-keychain/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/t509-keychain/</guid>
-      <description>or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.</description>
+      <guid>http://localhost:1313/projects/t509-keychain/</guid>
+      <description>&lt;p&gt;or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

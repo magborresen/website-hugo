@@ -2,155 +2,145 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Magnus Borresen</title>
-    <link>https://magnusborresen.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>keras</title>
-      <link>https://magnusborresen.com/tags/keras/</link>
-      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/keras/</guid>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
-      <link>https://magnusborresen.com/tags/python/</link>
-      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/python/</guid>
+      <title>Netlify</title>
+      <link>http://localhost:1313/tags/netlify/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/netlify/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tensorflow</title>
-      <link>https://magnusborresen.com/tags/tensorflow/</link>
-      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/tensorflow/</guid>
+      <title>Submodule</title>
+      <link>http://localhost:1313/tags/submodule/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/submodule/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>time-series</title>
-      <link>https://magnusborresen.com/tags/time-series/</link>
+      <title>Keras</title>
+      <link>http://localhost:1313/tags/keras/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/time-series/</guid>
+      <guid>http://localhost:1313/tags/keras/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>motorcycle</title>
-      <link>https://magnusborresen.com/tags/motorcycle/</link>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tensorflow</title>
+      <link>http://localhost:1313/tags/tensorflow/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Time-Series</title>
+      <link>http://localhost:1313/tags/time-series/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/time-series/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Motorcycle</title>
+      <link>http://localhost:1313/tags/motorcycle/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/motorcycle/</guid>
+      <guid>http://localhost:1313/tags/motorcycle/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>repair</title>
-      <link>https://magnusborresen.com/tags/repair/</link>
+      <title>Repair</title>
+      <link>http://localhost:1313/tags/repair/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/repair/</guid>
+      <guid>http://localhost:1313/tags/repair/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>aisler</title>
-      <link>https://magnusborresen.com/tags/aisler/</link>
+      <title>Aisler</title>
+      <link>http://localhost:1313/tags/aisler/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/aisler/</guid>
+      <guid>http://localhost:1313/tags/aisler/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kicad</title>
-      <link>https://magnusborresen.com/tags/kicad/</link>
+      <title>Kicad</title>
+      <link>http://localhost:1313/tags/kicad/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/kicad/</guid>
+      <guid>http://localhost:1313/tags/kicad/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pcb</title>
-      <link>https://magnusborresen.com/tags/pcb/</link>
+      <title>Pcb</title>
+      <link>http://localhost:1313/tags/pcb/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/pcb/</guid>
+      <guid>http://localhost:1313/tags/pcb/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cordic</title>
-      <link>https://magnusborresen.com/tags/cordic/</link>
+      <title>Cordic</title>
+      <link>http://localhost:1313/tags/cordic/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/cordic/</guid>
+      <guid>http://localhost:1313/tags/cordic/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dsp</title>
-      <link>https://magnusborresen.com/tags/dsp/</link>
+      <title>Dsp</title>
+      <link>http://localhost:1313/tags/dsp/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/dsp/</guid>
+      <guid>http://localhost:1313/tags/dsp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fpga</title>
-      <link>https://magnusborresen.com/tags/fpga/</link>
+      <title>Fpga</title>
+      <link>http://localhost:1313/tags/fpga/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/fpga/</guid>
+      <guid>http://localhost:1313/tags/fpga/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>math</title>
-      <link>https://magnusborresen.com/tags/math/</link>
+      <title>Math</title>
+      <link>http://localhost:1313/tags/math/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/math/</guid>
+      <guid>http://localhost:1313/tags/math/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>design</title>
-      <link>https://magnusborresen.com/tags/design/</link>
+      <title>Design</title>
+      <link>http://localhost:1313/tags/design/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/design/</guid>
+      <guid>http://localhost:1313/tags/design/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>electronics</title>
-      <link>https://magnusborresen.com/tags/electronics/</link>
+      <title>Electronics</title>
+      <link>http://localhost:1313/tags/electronics/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/electronics/</guid>
+      <guid>http://localhost:1313/tags/electronics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>control</title>
-      <link>https://magnusborresen.com/tags/control/</link>
+      <title>Control</title>
+      <link>http://localhost:1313/tags/control/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/tags/control/</guid>
+      <guid>http://localhost:1313/tags/control/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

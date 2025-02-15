@@ -2,145 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://magnusborresen.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/git/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/netlify-submodule/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/netlify/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/netlify/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/submodule/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/keras/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/keras/</loc>
+    <loc>http://localhost:1313/posts/timeseriesgenerator-keras/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/posts/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/posts/timeseriesgenerator-keras/</loc>
+    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/python/</loc>
+    <loc>http://localhost:1313/tags/tensorflow/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/python/</loc>
+    <loc>http://localhost:1313/tags/time-series/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/</loc>
-    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/tags/tensorflow/</loc>
-    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/tags/time-series/</loc>
-    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/ifil/</loc>
+    <loc>http://localhost:1313/tags/motorcycle/</loc>
     <lastmod>2023-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/motorcycle/</loc>
+    <loc>http://localhost:1313/categories/motorcycle/</loc>
     <lastmod>2023-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/motorcycle/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2023-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/repair/</loc>
+    <loc>http://localhost:1313/tags/repair/</loc>
     <lastmod>2023-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/ifil/tank-paint/</loc>
+    <loc>http://localhost:1313/projects/tank-paint/</loc>
     <lastmod>2023-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/aisler/</loc>
+    <loc>http://localhost:1313/tags/aisler/</loc>
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/kicad/</loc>
+    <loc>http://localhost:1313/tags/kicad/</loc>
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/pcb/</loc>
+    <loc>http://localhost:1313/tags/pcb/</loc>
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/pcb-art/</loc>
+    <loc>http://localhost:1313/categories/pcb-art/</loc>
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/</loc>
+    <loc>http://localhost:1313/projects/t509-keychain/</loc>
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/t509-keychain/</loc>
-    <lastmod>2023-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://magnusborresen.com/projects/8th-semester/</loc>
+    <loc>http://localhost:1313/projects/8th-semester/</loc>
     <lastmod>2022-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/university/</loc>
+    <loc>http://localhost:1313/categories/university/</loc>
     <lastmod>2022-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/cordic/</loc>
+    <loc>http://localhost:1313/tags/cordic/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/dsp/</loc>
+    <loc>http://localhost:1313/tags/dsp/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/dsp/</loc>
+    <loc>http://localhost:1313/categories/dsp/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/posts/fixed-point-cordic/</loc>
+    <loc>http://localhost:1313/posts/fixed-point-cordic/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/fpga/</loc>
+    <loc>http://localhost:1313/tags/fpga/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/math/</loc>
+    <loc>http://localhost:1313/tags/math/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/design/</loc>
+    <loc>http://localhost:1313/tags/design/</loc>
     <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/electronics/</loc>
+    <loc>http://localhost:1313/tags/electronics/</loc>
     <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/electronics-design/</loc>
+    <loc>http://localhost:1313/categories/electronics-design/</loc>
     <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/ulevel/</loc>
+    <loc>http://localhost:1313/projects/ulevel/</loc>
     <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/acoustics/</loc>
+    <loc>http://localhost:1313/categories/acoustics/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/machine-learning/</loc>
+    <loc>http://localhost:1313/categories/machine-learning/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/categories/neural-networks/</loc>
+    <loc>http://localhost:1313/categories/neural-networks/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/7th-semester/</loc>
+    <loc>http://localhost:1313/projects/7th-semester/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/uspot/</loc>
+    <loc>http://localhost:1313/projects/uspot/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/6th-semester/</loc>
+    <loc>http://localhost:1313/projects/6th-semester/</loc>
     <lastmod>2021-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/5th-semester/</loc>
+    <loc>http://localhost:1313/projects/5th-semester/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/4th-semester/</loc>
+    <loc>http://localhost:1313/projects/4th-semester/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/3rd-semester/</loc>
+    <loc>http://localhost:1313/projects/3rd-semester/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/2nd-semester/</loc>
+    <loc>http://localhost:1313/projects/2nd-semester/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/projects/1st-semester/</loc>
+    <loc>http://localhost:1313/projects/1st-semester/</loc>
     <lastmod>2018-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/posts/bode-plots-in-python/</loc>
+    <loc>http://localhost:1313/posts/bode-plots-in-python/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/tags/control/</loc>
+    <loc>http://localhost:1313/tags/control/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2016-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://magnusborresen.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2016-11-05T00:00:00+00:00</lastmod>
   </url>
 </urlset>

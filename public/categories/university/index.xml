@@ -1,69 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>university on Magnus Borresen</title>
-    <link>https://magnusborresen.com/categories/university/</link>
-    <description>Recent content in university on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>University on Magnus Borresen</title>
+    <link>http://localhost:1313/categories/university/</link>
+    <description>Recent content in University on Magnus Borresen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/categories/university/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/university/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Track-Before-Detect FMCW Radar Algorithm Exploration</title>
-      <link>https://magnusborresen.com/projects/8th-semester/</link>
+      <link>http://localhost:1313/projects/8th-semester/</link>
       <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/8th-semester/</guid>
-      <description>Now that there&amp;rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm.</description>
+      <guid>http://localhost:1313/projects/8th-semester/</guid>
+      <description>&lt;p&gt;Now that there&amp;rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Near Real Time Error Detection in 3D Prints</title>
-      <link>https://magnusborresen.com/projects/6th-semester/</link>
+      <link>http://localhost:1313/projects/6th-semester/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/6th-semester/</guid>
-      <description>My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 of my fellow students. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing.
-However the current methods would only tell you if the printer started making “spaghetti”.</description>
+      <guid>http://localhost:1313/projects/6th-semester/</guid>
+      <description>&lt;p&gt;My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 of my fellow students. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing.&lt;/p&gt;&#xA;&lt;p&gt;However the current methods would only tell you if the printer started making “spaghetti”. Since we were working on a thesis in Vision Graphics and Interactive Systems, I proposed to my group that we could do a project around detecting errors in 3D prints. They ended up thinking it was a good idea as well. We pitched the idea to our supervisor and he liked it as well.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Avalanche Rescue Drone</title>
-      <link>https://magnusborresen.com/projects/5th-semester/</link>
+      <link>http://localhost:1313/projects/5th-semester/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/5th-semester/</guid>
-      <description>For our 5th semester project, my group and I chose to work on a project that I proposed. I had seen some attemps at making drones that could be used for avalanche rescue operations, but none of them seemed to work very well. So we decided that we would investigate and see if we could make such a drone ourselves. This was definitely one of the most extensive projects during my university studies.</description>
+      <guid>http://localhost:1313/projects/5th-semester/</guid>
+      <description>&lt;p&gt;For our 5th semester project, my group and I chose to work on a project that I proposed. I had seen some attemps at making drones that could be used for avalanche rescue operations, but none of them seemed to work very well. So we decided that we would investigate and see if we could make such a drone ourselves. This was definitely one of the most extensive projects during my university studies.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Custom CPU and Sensor System</title>
-      <link>https://magnusborresen.com/projects/4th-semester/</link>
+      <link>http://localhost:1313/projects/4th-semester/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/4th-semester/</guid>
-      <description>Looking back, my fourth semester project was kind of a stretch in terms of useability. We have to create something that we think is exciting, but also fullfills the study regulations. Sometimes, very funky projects is the outcome of that.
-A little background before telling you about the project. AAU has multiple student run organization that builds different stuff or simply meet up to discuss different topics. I was very inspired by AAUSAT, which is a project to launch nanosatelittes build by students.</description>
+      <guid>http://localhost:1313/projects/4th-semester/</guid>
+      <description>&lt;p&gt;Looking back, my fourth semester project was kind of a stretch in terms of useability. We have to create something that we think is exciting, but also fullfills the study regulations. Sometimes, very funky projects is the outcome of that.&lt;/p&gt;&#xA;&lt;p&gt;A little background before telling you about the project. AAU has multiple student run organization that builds different stuff or simply meet up to discuss different topics. I was very inspired by AAUSAT, which is a project to launch nanosatelittes build by students. Also AAU Racing, that builds and races a Formula type car. However I wanted a project that was grounded and actually had a posibillity to make a scientific and environmental contribution. Since AAUSAT was launching stuff into space and AAU Racing was still using fossil fuels, none of them intrigued me enough to join.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>HiFi Power Amplifier</title>
-      <link>https://magnusborresen.com/projects/3rd-semester/</link>
+      <link>http://localhost:1313/projects/3rd-semester/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/3rd-semester/</guid>
-      <description>On my third semester we really started to dig down in all the fun analog electronics stuff. In fact we had a whole course about discrete components. So naturally our project was going to involve a lot of those. Our 5 man group decided on making a HiFi Amplifier. But because this being AAU, we had to have some sort of thoughts about the UN world goals in the project as well.</description>
+      <guid>http://localhost:1313/projects/3rd-semester/</guid>
+      <description>&lt;p&gt;On my third semester we really started to dig down in all the fun analog electronics stuff. In fact we had a whole course about discrete components. So naturally our project was going to involve a lot of those. Our 5 man group decided on making a HiFi Amplifier. But because this being AAU, we had to have some sort of thoughts about the UN world goals in the project as well. Now the only thing that makes sence from an efficiency point of view today is a class D amplifier. But that is basically taking an analog signal, making it digital and then making it analog again. That was no fun. So we decided on making a Class G amplifier.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>EMC Testing Probe</title>
-      <link>https://magnusborresen.com/projects/2nd-semester/</link>
+      <link>http://localhost:1313/projects/2nd-semester/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/2nd-semester/</guid>
-      <description>On the 2nd semester of my studies I was in a project group with 5 other students. Now we had dipped our toes in the water from the 1st semester and we had some more interesting project proposals. My group chose to go with a proposal for automating probe moves in an EMI/EMC testing chamber.
-The project was done in collaboration with FORCE Technology, who does EMC/EMI testing for other companies.</description>
+      <guid>http://localhost:1313/projects/2nd-semester/</guid>
+      <description>&lt;p&gt;On the 2nd semester of my studies I was in a project group with 5 other students. Now we had dipped our toes in the water from the 1st semester and we had some more interesting project proposals. My group chose to go with a proposal for automating probe moves in an EMI/EMC testing chamber.&lt;/p&gt;&#xA;&lt;p&gt;The project was done in collaboration with FORCE Technology, who does EMC/EMI testing for other companies. When doing this sort of testing, you have to make sure that you are shooting the right amount of interfering signals on to a grid on which the DUT is located. This requires probing in specific locations in the grid to make sure that the radiating interference in uniform across the grid. We visitied FORCE at their location in Aarhus to get a better feel of what was actually needed. A second group was also working on the same project case and came up with a very different we solution.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fpga on Magnus Borresen</title>
-    <link>https://magnusborresen.com/tags/fpga/</link>
-    <description>Recent content in fpga on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Fpga on Magnus Borresen</title>
+    <link>http://localhost:1313/tags/fpga/</link>
+    <description>Recent content in Fpga on Magnus Borresen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/fpga/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fpga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fixed Point CORDIC</title>
-      <link>https://magnusborresen.com/posts/fixed-point-cordic/</link>
+      <link>http://localhost:1313/posts/fixed-point-cordic/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
-      <description>This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU. It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
+      <guid>http://localhost:1313/posts/fixed-point-cordic/</guid>
+      <description>&lt;p&gt;This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU.&#xA;It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation. Actually, it also goes through the mathematical derivation of the CORDIC algorithm, but I won&amp;rsquo;t bore you with that. You just need to know that the algorithm uses &amp;ldquo;microrotations&amp;rdquo; to match the angle using the math below&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

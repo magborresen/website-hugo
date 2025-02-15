@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>repair on Magnus Borresen</title>
-    <link>https://magnusborresen.com/tags/repair/</link>
-    <description>Recent content in repair on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Repair on Magnus Borresen</title>
+    <link>http://localhost:1313/tags/repair/</link>
+    <description>Recent content in Repair on Magnus Borresen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Mon, 17 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/tags/repair/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/repair/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Triumph T509 horrible tank paint job. Warning it&#39;s horrible</title>
-      <link>https://magnusborresen.com/ifil/tank-paint/</link>
+      <link>http://localhost:1313/projects/tank-paint/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/ifil/tank-paint/</guid>
-      <description>When I first go to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain alps with. I spent quite some time looking at ebay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998.
-I noticed on the ebay add that it had quite a lot of stickers on it, which I didn&amp;rsquo;t really like, but I bought it anyway and only ended up paying 1600 euros for it.</description>
+      <guid>http://localhost:1313/projects/tank-paint/</guid>
+      <description>&lt;p&gt;When I first go to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain Alps with. I spent quite some time looking at eBay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998.&lt;/p&gt;&#xA;&lt;p&gt;I noticed on the eBay ad that it had quite a lot of stickers on it, which I didn&amp;rsquo;t like, but I bought it anyway and only ended up paying 1600 euros for it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

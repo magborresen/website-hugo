@@ -2,113 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Magnus Borresen</title>
-    <link>https://magnusborresen.com/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Triumph T509 horrible tank paint job. Warning it&#39;s horrible</title>
+      <link>http://localhost:1313/projects/tank-paint/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/tank-paint/</guid>
+      <description>&lt;p&gt;When I first go to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain Alps with. I spent quite some time looking at eBay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998.&lt;/p&gt;&#xA;&lt;p&gt;I noticed on the eBay ad that it had quite a lot of stickers on it, which I didn&amp;rsquo;t like, but I bought it anyway and only ended up paying 1600 euros for it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Triumph T509 PCB keychain</title>
-      <link>https://magnusborresen.com/projects/t509-keychain/</link>
+      <link>http://localhost:1313/projects/t509-keychain/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/t509-keychain/</guid>
-      <description>or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.</description>
+      <guid>http://localhost:1313/projects/t509-keychain/</guid>
+      <description>&lt;p&gt;or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I&amp;rsquo;ve always wanted to do my own PCB artwork but I didn&amp;rsquo;t just want to do it on any old PCB. By that I mean, I didn&amp;rsquo;t wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Track-Before-Detect FMCW Radar Algorithm Exploration</title>
-      <link>https://magnusborresen.com/projects/8th-semester/</link>
+      <link>http://localhost:1313/projects/8th-semester/</link>
       <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/8th-semester/</guid>
-      <description>Now that there&amp;rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm.</description>
+      <guid>http://localhost:1313/projects/8th-semester/</guid>
+      <description>&lt;p&gt;Now that there&amp;rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>µLevel Pressure Sensor</title>
-      <link>https://magnusborresen.com/projects/ulevel/</link>
+      <link>http://localhost:1313/projects/ulevel/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/ulevel/</guid>
-      <description>The µLevel is one of my pet projects that I started after needing a bed levelling feature on my 3D printer. I had built a Hypercube 3D printer that I never really got working properly. So I ended up selling it and bought a Creality Ender 3 instead. This means that the project has been put on hold since it was designed pretty specifically to the Hypercube. However I might pick it up again.</description>
+      <guid>http://localhost:1313/projects/ulevel/</guid>
+      <description>&lt;p&gt;The µLevel is one of my pet projects that I started after needing a bed levelling feature on my 3D printer. I had built a &lt;a href=&#34;https://www.thingiverse.com/thing:1752766&#34;&gt;Hypercube 3D printer&lt;/a&gt; that I never really got working properly. So I ended up selling it and bought a Creality Ender 3 instead. This means that the project has been put on hold since it was designed pretty specifically to the Hypercube. However I might pick it up again. Never the less you can read more about it below.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Robustness Testing of a CNN in Acoustic Scene Classification</title>
-      <link>https://magnusborresen.com/projects/7th-semester/</link>
+      <link>http://localhost:1313/projects/7th-semester/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/7th-semester/</guid>
-      <description>The first semester of the master studies in Signal Processing was more or less an introduction to signal processing within audio systems. We had a few project proposals from external companies. My project group and I (4 people in total), found a few of the proposals from the company RTX A/S interesting. RTX works a lot in the audio domain and develops a great deal of headset technology. They were interested in some student investigating more into classification of acoustic scenes using neural networks.</description>
+      <guid>http://localhost:1313/projects/7th-semester/</guid>
+      <description>&lt;p&gt;The first semester of the master studies in Signal Processing was more or less an introduction to signal processing within audio systems. We had a few project proposals from external companies. My project group and I (4 people in total), found a few of the proposals from the company RTX A/S interesting. RTX works a lot in the audio domain and develops a great deal of headset technology. They were interested in some student investigating more into classification of acoustic scenes using neural networks. They did not provide us with a whole lot of information as to what they could use such a technology for, however we discussed that a great use case would be some adaptive noise cancellation algorithms.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>µSpot Battery Spot Welder</title>
-      <link>https://magnusborresen.com/projects/uspot/</link>
+      <link>http://localhost:1313/projects/uspot/</link>
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/uspot/</guid>
-      <description>For a few years now, I have been working with 18650 battery cells that I got a ton of from an bike shop that had deemed them defective. I took the ebike batteries apart and tested each cell individually. Usually I would only find 1-2 cells per pack that was actually the culprit of the pack testing bad at the bike shop. This is out of a 40 cell pack.</description>
+      <guid>http://localhost:1313/projects/uspot/</guid>
+      <description>&lt;p&gt;For a few years now, I have been working with 18650 battery cells that I got a ton of from an bike shop that had deemed them defective. I took the ebike batteries apart and tested each cell individually. Usually I would only find 1-2 cells per pack that was actually the culprit of the pack testing bad at the bike shop. This is out of a 40 cell pack.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Near Real Time Error Detection in 3D Prints</title>
-      <link>https://magnusborresen.com/projects/6th-semester/</link>
+      <link>http://localhost:1313/projects/6th-semester/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/6th-semester/</guid>
-      <description>My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 of my fellow students. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing.
-However the current methods would only tell you if the printer started making “spaghetti”.</description>
+      <guid>http://localhost:1313/projects/6th-semester/</guid>
+      <description>&lt;p&gt;My 6th’s semester was writing my bachelor thesis. I worked on a project for the thesis with 3 of my fellow students. I have a Creality Ender 3 3D printer at home that I use for my hobby projects. I had seen a few projects trying to use deep learning to give people a heads up whether their print was failing.&lt;/p&gt;&#xA;&lt;p&gt;However the current methods would only tell you if the printer started making “spaghetti”. Since we were working on a thesis in Vision Graphics and Interactive Systems, I proposed to my group that we could do a project around detecting errors in 3D prints. They ended up thinking it was a good idea as well. We pitched the idea to our supervisor and he liked it as well.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Avalanche Rescue Drone</title>
-      <link>https://magnusborresen.com/projects/5th-semester/</link>
+      <link>http://localhost:1313/projects/5th-semester/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/5th-semester/</guid>
-      <description>For our 5th semester project, my group and I chose to work on a project that I proposed. I had seen some attemps at making drones that could be used for avalanche rescue operations, but none of them seemed to work very well. So we decided that we would investigate and see if we could make such a drone ourselves. This was definitely one of the most extensive projects during my university studies.</description>
+      <guid>http://localhost:1313/projects/5th-semester/</guid>
+      <description>&lt;p&gt;For our 5th semester project, my group and I chose to work on a project that I proposed. I had seen some attemps at making drones that could be used for avalanche rescue operations, but none of them seemed to work very well. So we decided that we would investigate and see if we could make such a drone ourselves. This was definitely one of the most extensive projects during my university studies.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Custom CPU and Sensor System</title>
-      <link>https://magnusborresen.com/projects/4th-semester/</link>
+      <link>http://localhost:1313/projects/4th-semester/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/4th-semester/</guid>
-      <description>Looking back, my fourth semester project was kind of a stretch in terms of useability. We have to create something that we think is exciting, but also fullfills the study regulations. Sometimes, very funky projects is the outcome of that.
-A little background before telling you about the project. AAU has multiple student run organization that builds different stuff or simply meet up to discuss different topics. I was very inspired by AAUSAT, which is a project to launch nanosatelittes build by students.</description>
+      <guid>http://localhost:1313/projects/4th-semester/</guid>
+      <description>&lt;p&gt;Looking back, my fourth semester project was kind of a stretch in terms of useability. We have to create something that we think is exciting, but also fullfills the study regulations. Sometimes, very funky projects is the outcome of that.&lt;/p&gt;&#xA;&lt;p&gt;A little background before telling you about the project. AAU has multiple student run organization that builds different stuff or simply meet up to discuss different topics. I was very inspired by AAUSAT, which is a project to launch nanosatelittes build by students. Also AAU Racing, that builds and races a Formula type car. However I wanted a project that was grounded and actually had a posibillity to make a scientific and environmental contribution. Since AAUSAT was launching stuff into space and AAU Racing was still using fossil fuels, none of them intrigued me enough to join.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>HiFi Power Amplifier</title>
-      <link>https://magnusborresen.com/projects/3rd-semester/</link>
+      <link>http://localhost:1313/projects/3rd-semester/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/3rd-semester/</guid>
-      <description>On my third semester we really started to dig down in all the fun analog electronics stuff. In fact we had a whole course about discrete components. So naturally our project was going to involve a lot of those. Our 5 man group decided on making a HiFi Amplifier. But because this being AAU, we had to have some sort of thoughts about the UN world goals in the project as well.</description>
+      <guid>http://localhost:1313/projects/3rd-semester/</guid>
+      <description>&lt;p&gt;On my third semester we really started to dig down in all the fun analog electronics stuff. In fact we had a whole course about discrete components. So naturally our project was going to involve a lot of those. Our 5 man group decided on making a HiFi Amplifier. But because this being AAU, we had to have some sort of thoughts about the UN world goals in the project as well. Now the only thing that makes sence from an efficiency point of view today is a class D amplifier. But that is basically taking an analog signal, making it digital and then making it analog again. That was no fun. So we decided on making a Class G amplifier.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>EMC Testing Probe</title>
-      <link>https://magnusborresen.com/projects/2nd-semester/</link>
+      <link>http://localhost:1313/projects/2nd-semester/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/2nd-semester/</guid>
-      <description>On the 2nd semester of my studies I was in a project group with 5 other students. Now we had dipped our toes in the water from the 1st semester and we had some more interesting project proposals. My group chose to go with a proposal for automating probe moves in an EMI/EMC testing chamber.
-The project was done in collaboration with FORCE Technology, who does EMC/EMI testing for other companies.</description>
+      <guid>http://localhost:1313/projects/2nd-semester/</guid>
+      <description>&lt;p&gt;On the 2nd semester of my studies I was in a project group with 5 other students. Now we had dipped our toes in the water from the 1st semester and we had some more interesting project proposals. My group chose to go with a proposal for automating probe moves in an EMI/EMC testing chamber.&lt;/p&gt;&#xA;&lt;p&gt;The project was done in collaboration with FORCE Technology, who does EMC/EMI testing for other companies. When doing this sort of testing, you have to make sure that you are shooting the right amount of interfering signals on to a grid on which the DUT is located. This requires probing in specific locations in the grid to make sure that the radiating interference in uniform across the grid. We visitied FORCE at their location in Aarhus to get a better feel of what was actually needed. A second group was also working on the same project case and came up with a very different we solution.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Raspberry Pi Hearing Tester</title>
-      <link>https://magnusborresen.com/projects/1st-semester/</link>
+      <link>http://localhost:1313/projects/1st-semester/</link>
       <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/projects/1st-semester/</guid>
-      <description>The first semester project I did was in a project group with 6 of my fellow students. The frame of the project was to get started with electronics, microcontrollers and single board computers. Being at Aalborg University, the project also had to relate the the UN World Goals. We decided on a project that would help uncover hearing disabilities and educate young people in the public schools. The below is the abstract from the project report</description>
+      <guid>http://localhost:1313/projects/1st-semester/</guid>
+      <description>&lt;p&gt;The first semester project I did was in a project group with 6 of my fellow students. The frame of the project was to get started with electronics, microcontrollers and single board computers. Being at Aalborg University, the project also had to relate the the UN World Goals. We decided on a project that would help uncover hearing disabilities and educate young people in the public schools. The below is the abstract from the project report&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

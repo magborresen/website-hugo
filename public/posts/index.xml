@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Magnus Borresen</title>
-    <link>https://magnusborresen.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Magnus Borresen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Magnus Borresen</copyright>
-    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://magnusborresen.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to run a Netlify build when uploading changes to a Git submodule</title>
+      <link>http://localhost:1313/posts/netlify-submodule/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/netlify-submodule/</guid>
+      <description>&lt;p&gt;Before I start writing anything in this post, I will say that the method I am going to explain comes from a blog post over at &lt;a href=&#34;https://flaviocopes.com/netlify-deploy-git-submodule-github-actions/&#34;&gt;flaviopost&lt;/a&gt;. I did not like the very short explanation as a rookie on his site, so I&amp;rsquo;ll try to elaborate here.&lt;/p&gt;&#xA;&lt;p&gt;What is the issue even to start with?&lt;/p&gt;&#xA;&lt;p&gt;Well, you know if you have a website using a static site generator and you&amp;rsquo;re working on your own theme. For me, this static site generator is Hugo. And I have a theme that I&amp;rsquo;ve modified from another creator.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Preparing Time Series Data For Neural Network Inputs</title>
-      <link>https://magnusborresen.com/posts/timeseriesgenerator-keras/</link>
+      <link>http://localhost:1313/posts/timeseriesgenerator-keras/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/timeseriesgenerator-keras/</guid>
-      <description>While working on my master&amp;rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the TimeseriesGenerator, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.
-Instead, I found another function called timeseries_dataset_from_array. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data.</description>
+      <guid>http://localhost:1313/posts/timeseriesgenerator-keras/</guid>
+      <description>&lt;p&gt;While working on my master&amp;rsquo;s thesis I needed some processing of temporal data such that it could be used as an input in TensorFlow Keras. Here I stumbled across the &lt;em&gt;TimeseriesGenerator&lt;/em&gt;, which is a function from the Keras library. However, this is no longer recommended to be used by TensorFlow.&lt;/p&gt;&#xA;&lt;p&gt;Instead, I found another function called &lt;em&gt;timeseries_dataset_from_array&lt;/em&gt;. Which takes a Numpy array and converts it into a TensorFlow dataset-type object. I would not always recommend using this, and it might be easier to just create your own function for loading and separating the data. But the &lt;em&gt;timeseries_dataset_from_array&lt;/em&gt; function is super neat if you are working with a lot of data and are trying to save space.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fixed Point CORDIC</title>
-      <link>https://magnusborresen.com/posts/fixed-point-cordic/</link>
+      <link>http://localhost:1313/posts/fixed-point-cordic/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/fixed-point-cordic/</guid>
-      <description>This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU. It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation.</description>
+      <guid>http://localhost:1313/posts/fixed-point-cordic/</guid>
+      <description>&lt;p&gt;This post was written as a part of my exam preparation for the course in Low Energy and Reconfigurable Systems at AAU.&#xA;It is a write-up from a mini project done in cooperation with two of my fellow students. The mini project goes through an architectural design of the CORDIC algorithm for calculating the $x$ and $y$ values of a cosine, given an angle. The architecture is at the RTL level and should need no further processing before implementation. Actually, it also goes through the mathematical derivation of the CORDIC algorithm, but I won&amp;rsquo;t bore you with that. You just need to know that the algorithm uses &amp;ldquo;microrotations&amp;rdquo; to match the angle using the math below&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bode Plots in Python</title>
-      <link>https://magnusborresen.com/posts/bode-plots-in-python/</link>
+      <link>http://localhost:1313/posts/bode-plots-in-python/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://magnusborresen.com/posts/bode-plots-in-python/</guid>
-      <description>This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.
-Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using pip in your terminal or command prompt.</description>
+      <guid>http://localhost:1313/posts/bode-plots-in-python/</guid>
+      <description>&lt;p&gt;This notebook will go through a pratical example of how to do bode plots in Python and how to find several other control related charateristics. We&amp;rsquo;ll look at an actual transfer function and derive all the information from that.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start off by importing the Python libraries that we are going to need. If you are not able to import the library, please install it using &lt;code&gt;pip&lt;/code&gt; in your terminal or command prompt.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
