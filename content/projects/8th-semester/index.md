@@ -4,6 +4,7 @@ date: "2022-06-14"
 description: Track-Before-Detect FMCW Radar Algorithm Exploration
 author: ["me"]
 title: Track-Before-Detect FMCW Radar Algorithm Exploration
+math: true
 ---
 
 Now that there's only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.

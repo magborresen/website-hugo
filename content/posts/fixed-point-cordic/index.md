@@ -21,14 +21,13 @@ Where we set $x_0 = 1$, $y_0 = 0$ and $z_0 = \theta$. Then $\sigma_i$ becomes th
 
 The pseudo-code for the algorithm is listed below.
 
-{{< figure src="cordic-pseudo.png" title="Psedo code for CORDIC algorithm" >}}
+{{< figure src="cordic-pseudo.png" title="Psedo code for CORDIC algorithm" align="center">}}
 
 The constant $k$ is calculated as $\prod_{i} k_i = \prod_{i} \frac{1}{\sqrt{1+2^{-2i}}}$. Meaning this constant can also be calculated beforehand.
 
 ## Numerical aspects (fixed vs. floating point)
 
 We wanted to test some of the aspects related to using a fixed point algorithm. Specifically, we wanted to see how many iterations we would expect to have before the algorithm converged over the number of decimal bits used in the fixed point. This was tested in Python using the FixedPoint library. The results are shown in the figure below.
-
 
 {{< figure src="Iterations-1.png" title="Iterations to run algorithm compared to the number of decimal points" >}}
 
@@ -97,7 +96,13 @@ Where $w$ is a weight associated with each operation that can be defined in diff
 
 ### Operation Schedule
 
-As we have previously already stated the allocation of our resources (i.e. one adder and one shifter per $CE$), we can now schedule from the results above. Thus for every C-step, we can only do one shift operation and one addition in each $CE$. So for $CE_0$, the shifting operations $x_4$ and $x_6$ have the lowest mobility and the highest urgency and thus should be scheduled first. Because of only having one bit-shifter, we have to schedule them in two C-steps. As they also have the same mobility, we can schedule them randomly. So we will schedule $x_4$ in the first C-step and $x_6$ in the second C-step. Now, our resource allocation also permits us to schedule an addition/subtraction in the first C-step, however since both $+_2$ and $+_7$ are dependent on $x_4$ and $x_6$ respectively, we cannot schedule those in C-step $1$. The only operation left for scheduling then is $-\_{10}$. For C-step $2$, the only addition that is available to perform is $+_2$ as $x_6$ is also scheduled for this C-step. We'll end up scheduling $+_7$ in C-step $3$. This scheduling scheme is used for $CE_0$ to $CE_9$. For $CE\_{10}$, we can see from the ASAP and ALAP schedules that the operations have no mobility, so we have to schedule them as is. Meaning we'll end up with the following schedule.
+As we have previously already stated the allocation of our resources (i.e. one adder and one shifter per $CE$), we can now schedule from the results above. For every C-step, we can only do one shift operation and one addition in each $CE$. So for $CE_0$, the shifting operations $x_4$ and $x_6$ have the lowest mobility and the highest urgency and should be scheduled first. Because of only having one bit-shifter, we have to schedule them in two C-steps. As they also have the same mobility, we can schedule them randomly.
+
+We will schedule $x_4$ in the first C-step and $x_6$ in the second C-step. 
+
+Now, our resource allocation also permits us to schedule an addition/subtraction in the first C-step, but since both $+_2$ and $+_7$ are dependent on $x_4$ and $x_6$ respectively, we cannot schedule those in C-step $1$. 
+
+The only operation left for scheduling then is $-\_{10}$. For C-step $2$, the only addition that is available to perform is $+_2$ as $x_6$ is also scheduled for this C-step. We'll end up scheduling $+_7$ in C-step $3$. This scheduling scheme is used for $CE_0$ to $CE_9$. For $CE\_{10}$, we can see from the ASAP and ALAP schedules that the operations have no mobility, so we have to schedule them as is. Meaning we'll end up with the following schedule.
 
 {{< figure src="PG_area-1.png" title="Precedence Graph according to schedule" >}}
 
@@ -109,7 +114,9 @@ From the ASM we can see that the output logic is dependent on $sign(z_i)$, which
 
 ### Datapath
 
-The datapath of a system is a collection of the operations, registers and the connections between them. Since the system we are designing both have time-constrain considerations as well as area constraints, each of the $CE$'s will have dedicated hardware such that inputs and outputs can be run "continuously". From the schedule, we can see that the datapath for $CE_0$ to $CE_9$ is identical. However our $CE_{10}$ does not share the same schedule and must therefore have a different datapath as there are more operations to consider. By using the schedule shown just before, we can implement the SDFG that we previously illustrated. The results are the datapath below.
+The datapath of a system is a collection of the operations, registers and the connections between them. Since the system we are designing both have time-constrain considerations as well as area constraints, each of the $CE$'s will have dedicated hardware such that inputs and outputs can be run "continuously". From the schedule, we can see that the datapath for $CE_0$ to $CE_9$ is identical. 
+
+Our, however, $CE_{10}$ does not share the same schedule and must therefore have a different datapath as there are more operations to consider. By using the schedule shown just before, we can implement the SDFG that we previously illustrated. The results are the datapath below.
 
 {{< figure src="datapath-1.png" title="Datapath for most Cordic elements" >}}
 
@@ -129,7 +136,9 @@ Multiplexers that can control more than one input will be controlled by two-bit 
 
 ## RTL Design
 
-Having defined a datapath, ASM and a schedule, we can start thinking about implementing the algorithm in Register Transfer Level (RTL). We have chosen not to explore the actual implementations of adders and multipliers, which means we only use IP blocks from the Quartus library. Multiplexers have been implemented as two different functional units with different amounts of input and control signal input sizes. The RTL diagram can be seen in the figure below.
+Having defined a datapath, ASM and a schedule, we can start thinking about implementing the algorithm in Register Transfer Level (RTL). We have chosen not to explore the actual implementations of adders and multipliers, which means we only use IP blocks from the Quartus library. 
+
+Multiplexers have been implemented as two different functional units with different amounts of input and control signal input sizes. The RTL diagram can be seen in the figure below.
 
 {{< figure src="RTL_Inside_CE.png" title="RTL illustration of the internals of a Cordic element." >}}
 

@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-<html><head lang="en">
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Track-Before-Detect FMCW Radar Algorithm Exploration - Magnus Borresen</title><link rel="icon" type="image/png" href=/static/assets/img/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Track-Before-Detect FMCW Radar Algorithm Exploration - Magnus Borresen</title><link rel="icon" type="image/png" href=assets/img/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Track-Before-Detect FMCW Radar Algorithm Exploration" />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Track-Before-Detect FMCW Radar Algorithm Exploration" />
-<meta property="og:description" content="Track-Before-Detect FMCW Radar Algorithm Exploration" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://magnusborresen.com/projects/8th-semester/" /><meta property="article:section" content="projects" />
-<meta property="article:published_time" content="2022-06-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-14T00:00:00+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Track-Before-Detect FMCW Radar Algorithm Exploration"/>
-<meta name="twitter:description" content="Track-Before-Detect FMCW Radar Algorithm Exploration"/>
-<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+	<meta property="og:url" content="http://localhost:1313/projects/8th-semester/">
+  <meta property="og:site_name" content="Magnus Borresen">
+  <meta property="og:title" content="Track-Before-Detect FMCW Radar Algorithm Exploration">
+  <meta property="og:description" content="Track-Before-Detect FMCW Radar Algorithm Exploration">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2022-06-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-06-14T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Track-Before-Detect FMCW Radar Algorithm Exploration">
+  <meta name="twitter:description" content="Track-Before-Detect FMCW Radar Algorithm Exploration">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://magnusborresen.com/css/main.7897b0157189f85b629cd1ef8a916bb8fc45e75abdf6c87f5a22030ab04fcce0.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://magnusborresen.com/css/dark.c95c5dcf5f32f8b67bd36f7dab66680e068fce2b303087294114aabf7a7c080b.css" media="(prefers-color-scheme: dark)"  />
-	
-
-	
-	
-
-	
-	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css" media="(prefers-color-scheme: dark)"  /><script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		
-		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 					renderMathInElement(document.body, {
@@ -43,15 +50,12 @@
 							]
 					});
 			});
-			</script>
-	
-	
-	
+		</script>
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://magnusborresen.com">Magnus Borresen</a>
+		<a href="http://localhost:1313/">Magnus Borresen</a>
 	</div>
 	<nav>
 		
@@ -61,25 +65,27 @@
 		
 		<a href="/projects/">Projects</a>
 		
-		<a href="/ifil/">I Fail I Learn</a>
+		<a href="/about/">About</a>
 		
 		
 	</nav>
 </header>
 
 <main>
-	<article>
-		<div class="title">
-			<h1 class="title">Track-Before-Detect FMCW Radar Algorithm Exploration</h1>
-			<div class="meta">Posted on Jun 14, 2022</div>
-		</div>
-		
-
-		<section class="body">
-			<p>Now that there&rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.</p>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Track-Before-Detect FMCW Radar Algorithm Exploration</h1>
+          <div class="meta">Posted on Jun 14, 2022</div>
+        </div>
+        
+        <section class="body">
+          <p>Now that there&rsquo;s only 3 semesters left of my university career, we wanted to try something new. I have never worked with radio systems much and particularly not radar. Thus when the oppertunity to do a project within Numerical Scientific Computing, my prosective group member and I went to one of the professors in the communications department and asked if he had a project that we could work on. He suggested we could work on a target tracking radar system utilizing a track-before-detect (TBD) algorithm. He actually presented a paper that he had cowritten showcasing a radar signal model, target state-space model and an algorith called a Particle Filter. Needless to say, we accepted his proposal and started researching. The goal of the project would be to create a simulation model that could be used to evaluate the computational complexity of such a tracking system.</p>
 <p>Since we knew absolutely nothing about radar systems we took to the internet and some recommended books from our supervisor. Ofcourse we commited the usual crime of throwing ourselves over the actual algorithm before we had gotten an overview of what different kinds of radar systems was available. However we know that we wanted to see if we could simulate a Multiple-Input Multiple-Output (MIMO) system using the signal model from the article our supervisor had cowritten, by the way, the article can be found <a href="https://www.researchgate.net/publication/224386509_A_Single-Stage_Target_Tracking_Algorithm_for_Multistatic_DVB-T_Passive_Radar_Systems">here</a>.</p>
 <p>So let&rsquo;s see what kind of usecase we can create for this radar system.</p>
-<figure><img src="usecase-1.png"/>
+<figure><img src="/projects/8th-semester/usecase-1.png">
 </figure>
 
 <p>We want to have an array of transmitter antennas and receiver antennas. The transmitters will send out a signal that will bounce of any present targets, but also other objects which we will call clutter. Since we don&rsquo;t have any actual antennas, we need to simulate how a signal would propagate from one antenna, to a target, to another antenna. How should the antennas even be placed in relation to each other? (Note: we will not be taking full use of the advantages that a MIMO system brings to the table because of the limited amount of time a semester offers.)</p>
@@ -105,28 +111,32 @@
 <p>The FMCW Radar uses a Fourier Transform on the received signal in order to determine</p>
 <p>Using FMCW Radar, we only need a single transciever in order to determine the range of our target, provided the target being in range. If however, we want to get some velocity and angle information about our target, this is also possible using FMCW. The idea of the pulse train come in when we start looking at the velocity of the target. Because a moving target will cause a very small change in doppler frequency when the wave is returned. This change is not enough for us to distinguish between velocities. However the phase will have a quite significant change associated with it. Therefore, we can exploit the change in phase between pulses and thus estimate the velocity with pretty good accuracy.</p>
 
-		</section>
+        </section>
+        <div class="post-tags">
+          
+          
+          
+        </div>
+      </div>
 
-		<div class="post-tags">
-			
-			
-			
-		</div>
-		</article>
+      
+      
+    </div>
+
+    </article>
 </main>
 <footer>
-  <div style="display:flex"><a class="soc" href="https://github.com/athul/magborresen" rel="me" title="GitHub"><i data-feather="github"></i></a>
-    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
-    <a class="border"></a></div>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/magborresen" rel="me" title="GitHub"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mag-borresen/" rel="me" title="LinkedIn"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#linkedin" />
+</svg></a><a class="border"></a></div>
   <div class="footer-info">
-    2023  © Magnus Borresen |  <a
-      href="https://github.com/athul/archie">Archie Theme (modified)</a> | Built with <a href="https://gohugo.io">Hugo</a>
+    2025  © Magnus Borresen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
-
-<script>
-  feather.replace()
-</script></div>
+</div>
     </body>
 </html>

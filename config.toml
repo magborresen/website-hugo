@@ -1,0 +1,45 @@
+baseURL = 'https://magnusborresen.com'
+languageCode = "en-us"
+title = "Magnus Borresen"
+theme = "archie"
+copyright = "© Magnus Borresen"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  mode = "auto"
+  useCDN = true
+  mathjax = true
+  katex = true
+  subtitle = 'My personal blog and vomitting about the weird projects I do.'
+  favicon = 'assets/img/favicon.ico'
+  [[params.social]]
+    name = "GitHub"
+    icon = "github"
+    url = 'https://github.com/athul/magborresen'
+    
+  [[params.social]]  
+    name = "LinkedIn"
+    icon = "linkedin"
+    url = 'https://www.linkedin.com/in/mag-borresen/'
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 3
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 4
