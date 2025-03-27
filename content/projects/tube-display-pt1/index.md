@@ -94,6 +94,8 @@ The bottom piece will then only exist to hold the wiring and make it a little ta
 
 The bottom piece will also have a hole cut out in the bottom so I can mount the magnetic power connector to the 5V supply.
 
+After creating the design for the case, I will 3D print it at work since I don't have my own 3D printer at the moment. Although I should receive one soon!
+
 __Follow along in the part 2 blog post to see how it all fits together.__
 
 
