@@ -7,7 +7,7 @@ author: ["me"]
 title: Triumph T509 PCB keychain
 ---
 
-or a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I've always wanted to do my own PCB artwork but I didn't just want to do it on any old PCB. By that I mean, I didn't wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork. 
+For a few years I have been intrigued by the badge life industry and the PCB artwork enthusiasts. I've always wanted to do my own PCB artwork but I didn't just want to do it on any old PCB. By that I mean, I didn't wanna take one of my practical designs and make an artwork out of the traces, silkscreen etc. I wanted to make a PCB entirely as the artwork. 
 
 {{< figure src="t509.jpeg" title="Picture of my Triumph T509 Speed Triple" >}}
 

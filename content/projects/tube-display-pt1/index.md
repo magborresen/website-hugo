@@ -1,9 +1,9 @@
 ---
 categories: fun
-date: "2025-03-6"
+date: 2025-03-06
 description: The project within a project. Designing a nice way to display the beauty of good old amplifier tubes that no longer work.
 author: ["me"]
-title: "When projects suddenly multiply. The tube amp display - Part 1.
+title: When projects suddenly multiply. The tube amp display - Part 1.
 draft: true
 ---
 

@@ -1,4 +1,5 @@
 ---
+type: blog
 categories: university
 date: "2022-06-14"
 description: Track-Before-Detect FMCW Radar Algorithm Exploration
