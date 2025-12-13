@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  {{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="site-title">
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  {{ block "hero" . }}{{ end }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+  </footer>
+</body>
+</html>
+

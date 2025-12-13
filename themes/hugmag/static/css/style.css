@@ -1,0 +1,239 @@
+
+/* Color Scheme:
+  - Background: #222831
+  - Text: #DCD7C9
+  - Links: #A27B5C
+  - Hovers: #31363F
+*/
+
+:root {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --text-muted: #999999;
+  --accent: #8899aa;
+  --accent-hover: #31363F;
+  --card-bg: #1e1e1e;
+  --card-hover: #1a1a1a;
+  --border: #2c2c2c;
+  --tag-bg: #263238;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-title {
+  margin-right: auto; /* Pushes the menu to the right */
+}
+
+.site-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.site-title h1:hover {
+  background-color: var(--accent-hover);  /* You can use any color you like */
+  border-radius: 4px;           /* Optional: gives a rounded effect */
+  text-decoration: none;        /* explicitly removes underline on hover */
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.main-nav li a:hover {
+  background-color: var(--accent-hover); /* You can use any color you like */
+  border-radius: 4px;        /* Optional: gives a rounded effect */
+  text-decoration: none; /* explicitly removes underline on hover */
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--bg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.post-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card h3 {
+  margin-top: 0;
+  color: var(--accent); /* Change this to your desired font color */
+}
+
+.post-card:hover {
+  box-shadow: 0 0 0 4px var(--accent-hover);
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.2rem 0 0.5rem;
+}
+
+.post-tags {
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--tag-bg);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+}
+
+/* Container for layout consistency */
+.container {
+  width: 100%;
+  max-width: 1100px; /* You can adjust this globally */
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Adds spacing on smaller screens */
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--bg);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.hero .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Text side */
+.hero-text {
+  flex: 1 1 60%;
+}
+
+.hero-text h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem; /* Increase size for emphasis */
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .subheading {
+  font-family: 'Roboto', sans-serif; /* Keep the subheading clean and modern */
+  font-size: 2.5rem;
+  color: #555;
+}
+
+/* Image side */
+.hero-image {
+  flex: 1 1 35%;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensures images are responsive */
+}
+
+.post-content figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+main article h1 {
+  color: var(--accent);
+}
+
+main article p small {
+  color: var(--text-muted);
+}
+
+
+

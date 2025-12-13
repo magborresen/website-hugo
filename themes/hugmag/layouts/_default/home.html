@@ -1,0 +1,36 @@
+{{ define "hero" }}
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <h1>Hi, I'm Magnus</h1>
+      <p class="subheading">An internet wanderer diving into life's curiosities and sharing the journey.</p>
+    </div>
+    <div class="hero-image">
+      <img src="{{ "/assets/img/prof_pic.png" | relURL }}" alt="Profile Picture">
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ define "main" }}
+  <h2>Latest Updates</h2>
+  <div class="post-list">
+  {{ $recent := sort .Site.RegularPages "Date" "desc" }}
+  {{ range first 5 $recent }}
+  <a href="{{ .RelPermalink }}" class="post-card-link">
+    <div class="post-card">
+      <h3>{{ .Title }}</h3>
+      <p class="post-meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+
+      {{ with .Params.tags }}
+        <div class="post-tags">
+          {{ range . }}
+            <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      {{ end }}
+      <p>{{ .Summary | truncate 200}}</p>
+    </div>
+  </a>
+  {{ end }}
+  </div>
+{{ end }}
