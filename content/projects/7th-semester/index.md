@@ -54,4 +54,4 @@ We also tried adding wind and speech onto the signal in order to simulate real w
 
 {{< figure src="asc_results.png" >}}
 
-If you would like to read our paper, you can download it [here]({{ site.baseurl }}{% link /assets/pdf/SPA7_770_paper.pdf %}) and our conference poster can be downloaded [here]({{ site.baseurl }}{% link /assets/pdf/poster.pdf %}).
+If you would like to read our paper, you can [download it](/assets/pdf/SPA7_770_paper.pdf) and our conference poster can be [downloaded here](/assets/pdf/poster.pdf).
