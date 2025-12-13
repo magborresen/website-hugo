@@ -92,7 +92,7 @@ Having calculated the mobilities for all the operations, we can go on to calcula
 
 $$U(op) = \frac{w}{CS}$$
 
-Where $w$ is a weight associated with each operation that can be defined in different ways. $\# CS1$ is the number of control steps we go through until we hit the c-step where the operation is scheduled in ALAP. For this implementation, we will set the weights equal to the computation times of the operations. But since we have assumed that all operations take the same amount of time to complete, we will set all the weights to $1$.
+Where $w$ is a weight associated with each operation that can be defined in different ways. $CS$ is the number of control steps we go through until we hit the c-step where the operation is scheduled in ALAP. For this implementation, we will set the weights equal to the computation times of the operations. But since we have assumed that all operations take the same amount of time to complete, we will set all the weights to $1$.
 
 ### Operation Schedule
 
