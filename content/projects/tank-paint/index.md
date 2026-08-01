@@ -7,7 +7,7 @@ author: ["me"]
 title: Triumph T509 horrible tank paint job. Warning it's horrible
 ---
 
-When I first go to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain Alps with. I spent quite some time looking at eBay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998. 
+When I first got to Munich, I was pretty determined that I was gonna buy a motorcycle to ride in the German and Austrain Alps with. I spent quite some time looking at eBay for offers and one day I found this amazing tornado red (yes that is the actual color name) T509 Speed Triple from 1998. 
 
 I noticed on the eBay ad that it had quite a lot of stickers on it, which I didn't like, but I bought it anyway and only ended up paying 1600 euros for it. 
 

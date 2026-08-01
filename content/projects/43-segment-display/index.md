@@ -4,7 +4,7 @@ date: "2025-03-09"
 description: Part 1 of 43-segment display build using 3D print and LEDs.
 author: ["me"]
 title: "Take me to Vienna - 43-Segment display part 1"
-draft: true
+draft: false
 ---
 
 Once in my life I have visited Vienna. Even though I have been living in Austria for almost 2 years. I didn't even live in Austria when I was visiting. It is actually much eaiser and faster to get to Vianna if you live in Munich. Which I did at the time. Vorarlberg is basically on the opposite side of Austria from Vienna. And Austria is WIDE.
@@ -55,15 +55,13 @@ Then I was able to import this image into a sketch on OnShape, the online CAD to
 
 Don't get me wrong. I am not a CAD expert and figuring out the best way to do this too time. A lot of time. Because OnShape does not give you an easy way to extrude directly from lines when many of them intersect. So I needed to create offsets of the center lines that I had drawn on top of the screenshot. I could then use the construction lines to set the offsets and all of the constraints needed. 
 
-__INSERT IMAGE HERE OF FINISHED SKETCH__
+{{< figure src="onshape-sketch.png" >}}
 
 I also parametrized the sketch such that I could easily change the width of the frame and create thicker walls in between the segments. 
 
-__INSERT IMAGE OF PARAMETRIZED SKETCH__
+{{< figure src="onshape-parameter.png" >}}
 
 Only thing left to do, was to decide how big I wanted the first prototype to be. This changed a lot during the design process. But it actually wasn't until I had the first 3D print finished that I saw how freaking tiny it is. Because I started by printing a piece that was roughly 5 cm in length and 2.5 cm in width. This meant that the "compartments" for the LED segments became super super small. So very small SMD LEDS needed.
-
-__INSER PIC OF 5 CM DESIGN__
 
 Having seen this, I thought it would be quite small for a prototype. When working with such things, it is always nicer to have a bit of room and not start by using the tightest tolarances possible. So I reprinted the design, but his time with a length of 10 cm and a width of roughly 5 cm. This came out just as good but the tolerances were a bit bigger. Meaning I will be able to put in some larger LEDs. 
 
@@ -92,5 +90,7 @@ The constant current sink basically works like a shift register over a serial pr
 So the signaling of the prototype can be designed according to the application note. Of course there will be slight differences since the devices are not the same. But in the end, a shift register is a shift register.
 
 {{< figure src="app-note-block-diagram.png" >}}
+
+Follow along in Part 2 :)
 
 
