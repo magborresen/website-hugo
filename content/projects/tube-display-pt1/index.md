@@ -4,12 +4,12 @@ date: 2025-03-06
 description: The project within a project. Designing a nice way to display the beauty of good old amplifier tubes that no longer work.
 author: ["me"]
 title: When projects suddenly multiply. The tube amp display - Part 1.
-draft: true
+draft: false
 ---
 
 In one of my previous posts about the restoration of the old German radio that my girlfriend gave me, I took out the old tube amplifiers and saved them. Now that time has come for the project within the project.
 
-__Insert picture of tubes__
+{{< figure src="tubes.jpeg" title="Leftover Vacuum Tubes." >}}
 
 Since I do not want to work on the old radio and reuse the tubes for the actual purpose, I have decided to repurpose them for an arts display. They look cool and why shouldn't one show off all the cool things that engineers used to build products with. The style of Nixie tubes have always intrigued me, but I don't want to make the all to common Nixie tube clock. I actually don't want to make a clock at all. 
 
@@ -94,7 +94,7 @@ The bottom piece will then only exist to hold the wiring and make it a little ta
 
 The bottom piece will also have a hole cut out in the bottom so I can mount the magnetic power connector to the 5V supply.
 
-After creating the design for the case, I will 3D print it at work since I don't have my own 3D printer at the moment. Although I should receive one soon!
+After creating the design for the case, I 3D printed it on my Elegoo Centauri Carbon, which worked wonderfully!
 
 __Follow along in the part 2 blog post to see how it all fits together.__
 
